@@ -1,0 +1,146 @@
+PERF: TickCount=546671 Name=OBootStrapper::Run Description=Begin function
+Operating System version: 6.1.7600 . Platform ID: 2
+Running 64-bit setup on a 64-bit operating system.
+Command line: "C:\SW\SP2010\Setup.exe" /Config C:\data\dropbox\Microsoft-FIABv3\ConfigurationFiles\SharePoint2010Foundation.Installation.config.xml 
+Parsing command line.
+Handling command line option: /Config
+Config XML file specified: C:\data\dropbox\Microsoft-FIABv3\ConfigurationFiles\SharePoint2010Foundation.Installation.config.xml
+Parsing config.xml at: C:\data\dropbox\Microsoft-FIABv3\ConfigurationFiles\SharePoint2010Foundation.Installation.config.xml
+Parsed setting: SERVERROLE with value: APPLICATION in config.xml.
+Parsed setting: UsingUIInstallMode with value: 0 in config.xml.
+Parsed setting: SETUP_REBOOT with value: Never in config.xml.
+Parsed setting: SETUPTYPE with value: CLEAN_INSTALL under package: sts in config.xml
+Logging type verbose specified in config.xml.
+Log directory: C:\data\dropbox\Microsoft-FIABv3\Logs specified in config.xml
+Log file template: Microsoft SharePoint Foundation 2010 Setup *.log specified in config.xml
+Display level basic specified in config.xml.
+Hide completion notice specified in config.xml.
+Log level changed from: Standard to: Verbose
+Searching for best setup controller dll to load...
+Checking for setup controller dll at [C:\SW\SP2010\Updates].
+Checking for setup controller dll at [C:\SW\SP2010].
+  Found setup controller dll at [C:\SW\SP2010\WSSSETUP.DLL].
+  Version [14.0.4755.1000].
+Checking for setup controller dll at [C:\SW\SP2010\Catalog].
+Checking for setup controller dll at [C:\SW\SP2010\Files].
+Checking for setup controller dll at [C:\SW\SP2010\Global].
+Checking for setup controller dll at [C:\SW\SP2010\PrerequisiteInstallerFiles].
+Checking for setup controller dll at [C:\SW\SP2010\Setup].
+Checking for setup controller dll at [C:\SW\SP2010\Updates].
+Checking for setup controller dll at [C:\SW\SP2010\wss.en-us].
+Verify file signature in "C:\SW\SP2010\Setup.exe"
+C:\SW\SP2010\Setup.exe is trusted.
+Verify file signature in "C:\SW\SP2010\WSSSETUP.DLL"
+C:\SW\SP2010\WSSSETUP.DLL is trusted.
+Using setup controller dll at [C:\SW\SP2010\WSSSETUP.DLL].
+PERF: TickCount=547500 Name=OBootStrapper::Run Description=Calling RunSetup
+
+PERF: TickCount=547500 Name=RunSetup Description=Begin function
+Catalyst execution began: 01/15/2013 10:32:19.
+Parsing config.xml at: C:\data\dropbox\Microsoft-FIABv3\ConfigurationFiles\SharePoint2010Foundation.Installation.config.xml
+Parsed setting: SERVERROLE with value: APPLICATION in config.xml.
+Parsed setting: UsingUIInstallMode with value: 0 in config.xml.
+Parsed setting: SETUP_REBOOT with value: Never in config.xml.
+Parsed setting: SETUPTYPE with value: CLEAN_INSTALL under package: sts in config.xml
+Logging type verbose specified in config.xml.
+Log directory: C:\data\dropbox\Microsoft-FIABv3\Logs specified in config.xml
+Log file template: Microsoft SharePoint Foundation 2010 Setup *.log specified in config.xml
+Display level basic specified in config.xml.
+Hide completion notice specified in config.xml.
+Setupexe Resiliency Mode is set to [DoNotPerform]; thus Resiliency is [disabled] for the [InstallExecutionMode]
+Searching for updated versions of resource files under the 'updates' folder [C:\SW\SP2010\updates].
+Found [0] resource files under the update folder.
+Searching for default versions of resource files under the folder [C:\SW\SP2010].
+Resource File Manager : Found (CultureTag=en-US) resource file at [C:\SW\SP2010\wss.en-us\WSETUPUI.DLL].
+Found [1] resource files under the default folder.
+Resource File Manager : Current user's LCID is [1030].
+Resource File Manager : Falling back from [da-DK] to [en-US].
+Resource File Manager : Selecting resource file (File=C:\SW\SP2010\wss.en-us\WSETUPUI.DLL) for CultureTag [da-DK].
+Setup temp folder set to [C:\Users\ADMINI~1.DEV\AppData\Local\Temp\2\Setup00000ce0].
+Running in [InstallExecutionMode]. Run from TEMP folder at [C:\Users\ADMINI~1.DEV\AppData\Local\Temp\2\Setup00000ce0].
+Copying setup UI dll from "C:\SW\SP2010\wss.en-us\WSETUPUI.DLL" to "C:\Users\ADMINI~1.DEV\AppData\Local\Temp\2\Setup00000ce0\WSETUPUI.DLL"
+Copying branding xml from "C:\SW\SP2010\wss.en-us\BRANDING.XML" to "C:\Users\ADMINI~1.DEV\AppData\Local\Temp\2\Setup00000ce0\BRANDING.XML"
+Copying setup chm from "C:\SW\SP2010\wss.en-us\SETUP.CHM" to "C:\Users\ADMINI~1.DEV\AppData\Local\Temp\2\Setup00000ce0\SETUP.CHM"
+Loaded resource file [C:\Users\ADMINI~1.DEV\AppData\Local\Temp\2\Setup00000ce0\WSETUPUI.DLL] (CultureTag=en-US).
+Initializing branding xml at path C:\Users\ADMINI~1.DEV\AppData\Local\Temp\2\Setup00000ce0\BRANDING.XML
+Loaded Dll : C:\SW\SP2010\WSSSETUP.DLL.
+Catalyst version is : 14.0.4755.1000
+JobExecutionMode is InstallExecutionMode.
+Catalyst processor architecture check: The system is AMD64
+Catalyst admin requirement check passed
+Catalyst setup running enviroment check: the current setup.exe is the only instance
+Catalyst Office 2003 Cache Integrity check. No corrupted cache found.
+System drive "C:\Windows" has 108344 MB free space is more then required 100 MB
+Catalyst system drive free space check passed
+All OS requirement check passed
+Checking if CLSID_DOMDocument60 can be created.
+Checking the version of MSXML6.
+MSXML version check passed. Minimum required version is [6.10.1129], installed Version is [6.30.7600.16385].
+Parsing setup.xml file: C:\SW\SP2010\Global\setup.xml
+Xml Signature verification succeeded for C:\SW\SP2010\Global\setup.xml
+TweakPropertyValue64EnvVar: Property name=INSTALLLOCATION; replacing %PROGRAMW6432% with %PROGRAMFILES%
+SkuType node is missing.
+DPC node is missing.
+Parsing post install command for product: WSS
+Parsing setup.xml: ServerUpgrade node : {90120000-1015-0409-0000-0000000FF1CE}(v2v)
+Parsing setup.xml: ServerUpgrade node : {90120000-1014-0000-0000-0000000FF1CE}(v2v)
+Parsing setup.xml: ServerUpgrade node : {90120000-1110-0000-0000-0000000FF1CE}(v2v)
+Detecting Server products qualified for upgrade...
+No upgradable server products found
+Parsing setup.xml file: C:\SW\SP2010\wss.en-us\setup.xml
+Xml Signature verification succeeded for C:\SW\SP2010\wss.en-us\setup.xml
+Product: WSS
+  AddOnGroup Culture: en-us
+    AddOnId: WSSMUI.EN-US
+Opening registry key: HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Office14.WSS.
+Opening registry key: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Office14.WSS.
+Opening registry key: HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Office14.WSS.
+Opening registry key: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Office14.WSS.
+Opening registry key: HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Office14.WSS.
+Opening registry key: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Office14.WSS.
+Resource File Manager : Converted CultureTag [en-us] to LocaleId [1033].
+Resource File Manager : Converted LocaleId [1030] to CultureTag [da-DK].
+Resource File Manager : Converted LocaleId [1030] to CultureTag [da-DK].
+Resource File Manager : Best-Match CultureTag (for CultureTag=[da-DK]) is CultureTag=[en-US].
+Found [1] system-supported cultures, out of [1] available AddOn cultures.
+Resource File Manager : Retrieve the Native-Culture-Name[English] for the Culture represented by CultureTag[en-us], HCULTURE[84].
+Found AddOn Culture: CultureTag=[en-us], NativeCltureName=[English].
+Product Deployment Mode: PerMachineManaged
+Target Deployment Account Security Identifier: S-1-5-18
+Loading package metadata: C:\SW\SP2010\wss.en-us\wssmui.xml
+Xml Signature verification succeeded for C:\SW\SP2010\wss.en-us\wssmui.xml.
+Loading package metadata: C:\SW\SP2010\Global\wss.xml
+Xml Signature verification succeeded for C:\SW\SP2010\Global\wss.xml.
+Loading package metadata: C:\SW\SP2010\Global\Wss\sts.xml
+Xml Signature verification succeeded for C:\SW\SP2010\Global\Wss\sts.xml.
+Putting the global MSI the end of the MSI chain
+Searching for patches in: C:\SW\SP2010\updates
+Opening registry key: HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Office14.WSS.
+Opening registry key: HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Office14.WSS.
+XmlSignature Verification succeeded for branding.xml.
+Setup did not detect WSS 14 on the machine
+Setup did not detect WSS 12 on the machine
+Server Install Not Blocked.
+Windows Update requires a reboot.
+Checking the version of Windows Identity Foundation.
+Minimum Windows Identity Foundation version 6.1.7600.0 is not installed.
+Minimum Microsoft sync Framework version 1.0.1215.0 is installed.
+Checking if SQL 2008 Native Client is installed.
+SQL 2008 Native Client is installed.
+Start C:\Windows\system32\ServerManagerCmd.exe -whatif -inputpath C:\Users\ADMINI~1.DEV\AppData\Local\Temp\2\PRE1.tmp.XML
+Windows Server 2008 Features or Role Services check passed.
+Checking if valid version of FilterPack 2.0 is installed.
+Catalyst IIS minimum version check passed. Current IIS Version is 7.5
+IIS 6 Management Compatibility component is installed
+Catalyst .Net version check passed: required .Net Framework version 3.5.30729.1 is installed
+Catalyst file system check passed: The path root is C:\ is NTFS
+Catalyst ASP.NET web extension enable check passed
+PowerShell check passed.
+Error: Catalyst intermediate PreReqCheck has failed Type: 66::PreReqCheckFailure. 
+
+Error: Catalyst intermediate PreReqCheck has failed Type: 66::PreReqCheckFailure. 
+
+Catalyst execution finished: 01/15/2013 10:32:31.  Return code: 30066.  Exception caught: PreReqCheckFailure.
+PERF: TickCount=559812 Name=RunSetup Description=End function
+
+Setup temp folder set to [C:\Users\ADMINI~1.DEV\AppData\Local\Temp\2\Setup00000ce0].

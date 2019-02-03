@@ -1,0 +1,13 @@
+<Configuration>
+	<Package Id="sts">
+		<Setting Id="REBOOT" Value="ReallySuppress"/>
+		<Setting Id="SETUPTYPE" Value="CLEAN_INSTALL"/>
+	</Package>
+
+	<Logging Type="verbose" Path="Logs" Template="Microsoft Windows SharePoint Services 3.0 Setup(*).log"/>
+	<Setting Id="SERVERROLE" Value="WFE"/>
+	<!-- <Setting Id="SERVERROLE" Value="SINGLESERVER"/> -->
+	<Setting Id="UsingUIInstallMode" Value="0"/>
+	<Setting Id="SETUP_REBOOT" Value="Never"/> 
+	<Display Level="basic" CompletionNotice="no" AcceptEULA="yes" />
+</Configuration>

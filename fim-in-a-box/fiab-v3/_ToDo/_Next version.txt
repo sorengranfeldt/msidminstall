@@ -1,0 +1,14 @@
+New things
+----------
+DNS A Records
+Two TCP/IP addresses
+Extra service account (FIMPasswordSite) ? SETSPN –S HTTP/pwdreset.bankdata.org (password reset FQDN)
+
+
+Configurator
+------------
+Fix tabs/field movement
+
+Errors
+-----
+Problems with space in installation root path

@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="SharePoint">
+      <section name="SafeControls" type="Microsoft.SharePoint.ApplicationRuntime.SafeControlsConfigurationHandler, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      <section name="RuntimeFilter" type="System.Configuration.SingleTagSectionHandler, System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <section name="WebPartLimits" type="System.Configuration.SingleTagSectionHandler, System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <section name="WebPartCache" type="System.Configuration.SingleTagSectionHandler, System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <section name="WebPartWorkItem" type="System.Configuration.SingleTagSectionHandler, System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <section name="WebPartControls" type="System.Configuration.SingleTagSectionHandler, System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <section name="SafeMode" type="Microsoft.SharePoint.ApplicationRuntime.SafeModeConfigurationHandler, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      <section name="MergedActions" type="System.Configuration.SingleTagSectionHandler, System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <section name="PeoplePickerWildcards" type="System.Configuration.NameValueSectionHandler, System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <section name="WorkflowServices" type="Microsoft.SharePoint.Workflow.ServiceConfigurationSection, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    </sectionGroup>
+    <sectionGroup name="System.Workflow.ComponentModel.WorkflowCompiler" type="System.Workflow.ComponentModel.Compiler.WorkflowCompilerConfigurationSectionGroup, System.Workflow.ComponentModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <section name="authorizedTypes" type="System.Workflow.ComponentModel.Compiler.AuthorizedTypesSectionHandler, System.Workflow.ComponentModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    </sectionGroup>
+    <sectionGroup name="microsoft.sharepoint.client">
+      <section name="serverRuntime" type="Microsoft.SharePoint.Client.ClientServiceServerRuntimeSection, Microsoft.SharePoint.Client.ServerRuntime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    </sectionGroup>
+    <sectionGroup name="ReportingServices">
+      <section name="DataExtensions" type="System.Configuration.DictionarySectionHandler" />
+    </sectionGroup>
+    <sectionGroup name="reportserver">
+      <section name="redirection" type="Microsoft.ReportingServices.SharePoint.Configuration.RSRedirectConfigSection, RSSharePointSoapProxy, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    </sectionGroup>
+    <section name="resourceManagementClient" type="Microsoft.ResourceManagement.WebServices.Client.ResourceManagementClientSection, Microsoft.ResourceManagement, Version=4.1.2273.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <sectionGroup name="system.web.extensions" type="System.Web.Configuration.SystemWebExtensionsSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <sectionGroup name="scripting" type="System.Web.Configuration.ScriptingSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+        <section name="scriptResourceHandler" type="System.Web.Configuration.ScriptingScriptResourceHandlerSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false" allowDefinition="MachineToApplication" />
+        <sectionGroup name="webServices" type="System.Web.Configuration.ScriptingWebServicesSectionGroup, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+          <section name="authenticationService" type="System.Web.Configuration.ScriptingAuthenticationServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false" allowDefinition="MachineToApplication" />
+          <section name="jsonSerialization" type="System.Web.Configuration.ScriptingJsonSerializationSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false" allowDefinition="Everywhere" />
+          <section name="profileService" type="System.Web.Configuration.ScriptingProfileServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false" allowDefinition="MachineToApplication" />
+          <section name="roleService" type="System.Web.Configuration.ScriptingRoleServiceSection, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false" allowDefinition="MachineToApplication" />
+        </sectionGroup>
+      </sectionGroup>
+    </sectionGroup>
+  </configSections>
+  <microsoft.sharepoint.client>
+    <serverRuntime>
+      <hostTypes>
+        <add type="Microsoft.SharePoint.Client.SPClientServiceHost, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      </hostTypes>
+    </serverRuntime>
+  </microsoft.sharepoint.client>
+  <SharePoint>
+    <SafeMode MaxControls="200" CallStack="false" DirectFileDependencies="10" TotalFileDependencies="50" AllowPageLevelTrace="false">
+      <PageParserPaths>
+      </PageParserPaths>
+    </SafeMode>
+    <WebPartLimits MaxZoneParts="50" PropertySize="1048576" />
+    <WebPartCache Storage="CacheObject" />
+    <WebPartControls DatasheetControlGuid="65BCBEE4-7728-41a0-97BE-14E1CAE36AAE" />
+    <SafeControls>
+      <SafeControl Assembly="System.Web, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Namespace="System.Web.UI.WebControls" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="System.Web, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Namespace="System.Web.UI.HtmlControls" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Namespace="System.Web.UI" TypeName="*" Safe="True" AllowRemoteDesigner="True" />
+      <SafeControl Assembly="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Namespace="System.Web.UI.WebControls" TypeName="SqlDataSource" Safe="False" AllowRemoteDesigner="False" SafeAgainstScript="True" />
+      <SafeControl Assembly="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Namespace="System.Web.UI.WebControls" TypeName="AccessDataSource" Safe="False" AllowRemoteDesigner="False" SafeAgainstScript="True" />
+      <SafeControl Assembly="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Namespace="System.Web.UI.WebControls" TypeName="XmlDataSource" Safe="False" AllowRemoteDesigner="False" SafeAgainstScript="True" />
+      <SafeControl Assembly="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" Namespace="System.Web.UI.WebControls" TypeName="ObjectDataSource" Safe="False" AllowRemoteDesigner="False" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="ListViewWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="ImageWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="PageViewerWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="TitleBarWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="MembersWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebControls" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.ApplicationPages" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.SoapServer" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Meetings" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="ListViewWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="ImageWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="PageViewerWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="TitleBarWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="MembersWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebControls" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.ApplicationPages" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.SoapServer" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Meetings" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Workflow" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint.Search, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Search.WebControls" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="Microsoft.SharePoint.Search, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Search.Internal.WebControls" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="ListViewWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="XsltListViewWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="ImageWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="PageViewerWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="PictureLibrarySlideshowWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="TitleBarWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="MembersWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebPartPages" TypeName="SPUserCodeWebPart" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WebControls" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.ApplicationPages" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.ApplicationPages.WebControls" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Applications.GroupBoard.WebPartPages" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Applications.GroupBoard.WebControls" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.SoapServer" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Meetings" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Workflow" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Search.WebControls" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.SharePoint.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Search.Internal.WebControls" TypeName="*" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Src="~/_controltemplates/*" IncludeSubFolders="True" Safe="True" AllowRemoteDesigner="True" SafeAgainstScript="True" />
+      <SafeControl Assembly="Microsoft.ReportingServices.SharePoint.UI.ServerPages, Version=10.50.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.ReportingServices.SharePoint.UI" TypeName="*" Safe="True" />
+      <SafeControl Assembly="Microsoft.ReportingServices.SharePoint.UI.WebParts, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.ReportingServices.SharePoint.UI.WebParts" TypeName="*" Safe="True" />
+      <SafeControl Assembly="Microsoft.IdentityManagement.WebUI.Controls, Version=4.1.2273.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="Microsoft.IdentityManagement.WebUI.Controls" TypeName="*" Safe="True" SafeAgainstScript="False" />
+      <SafeControl Assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI" TypeName="*" Safe="True" />
+    </SafeControls>
+    <PeoplePickerWildcards>
+      <clear />
+      <add key="AspNetSqlMembershipProvider" value="%" />
+    </PeoplePickerWildcards>
+    <WorkflowServices>
+      <WorkflowService Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Class="Microsoft.SharePoint.Workflow.SPWinOEWSSService">
+      </WorkflowService>
+      <WorkflowService Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Class="Microsoft.SharePoint.Workflow.SPWinOETaskService">
+      </WorkflowService>
+    </WorkflowServices>
+    <MergedActions>
+      <Action id="00e9a1da-5347-40ad-b5e9-214f9de71bf4" sourceFile="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\config\Webconfig.rs.xml" />
+      <Action id="58382257-b886-4f27-a566-a7bfcd448aa6" sourceFile="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\config\Webconfig.rs.xml" />
+      <Action id="0772c0f8-7f82-4430-a4c2-d419fba21eec" sourceFile="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\config\Webconfig.rs.xml" />
+      <Action id="c6ab06e7-8010-4e47-80fd-6c02c3f0fe18" sourceFile="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\config\Webconfig.rs.xml" />
+      <Action id="54746c6e-b00f-4b32-b7e3-d4c8d1ef7c10" sourceFile="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\config\Webconfig.rs.xml" />
+      <Action id="ae31f688-4253-4bc4-b5b2-6ae55c9f85a1" sourceFile="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\config\Webconfig.rs.xml" />
+      <Action id="f460ad0a-93e3-4f57-8b34-43500cd5c421" sourceFile="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\config\Webconfig.rs.xml" />
+      <Action id="596cd522-3c7e-4694-8e69-7bc7fb95952a" sourceFile="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\config\Webconfig.rs.xml" />
+      <Action id="5aecae94-e886-47f9-aaeb-4db4d8ebad0e" sourceFile="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\config\Webconfig.rs.xml" />
+      <Action id="591077dc-eea5-4770-89b9-c457e82057f6" sourceFile="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\config\Webconfig.rs.xml" />
+      <Action id="68c8f882-0c21-4190-9c85-ec9672bf8c16" sourceFile="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\config\Webconfig.rs.xml" />
+    </MergedActions>
+  </SharePoint>
+  <system.web>
+    <securityPolicy>
+      <trustLevel name="WSS_Medium" policyFile="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\config\wss_mediumtrust.config" />
+      <trustLevel name="WSS_Minimal" policyFile="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\config\wss_minimaltrust.config" />
+    </securityPolicy>
+    <httpHandlers>
+      <add verb="*" path="*.asmx" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      <add verb="*" path="*_AppService.axd" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+      <add verb="GET,HEAD" path="ScriptResource.axd" validate="false" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+    </httpHandlers>
+    <customErrors mode="On" />
+    <httpRuntime maxRequestLength="51200" />
+    <authentication mode="Windows" />
+    <identity impersonate="true" />
+    <authorization>
+      <allow users="*" />
+    </authorization>
+    <httpModules>
+      <add name="ScriptModule" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+    </httpModules>
+    <globalization fileEncoding="utf-8" />
+    <compilation batch="false" debug="false">
+      <assemblies>
+        <add assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+        <add assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+        <add assembly="Microsoft.Web.CommandUI, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+        <add assembly="Microsoft.SharePoint.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+        <add assembly="Microsoft.IdentityManagement.WebUI.Controls, Version=4.1.2273.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+        <add assembly="Microsoft.ResourceManagement, Version=4.1.2273.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      </assemblies>
+      <expressionBuilders>
+        <remove expressionPrefix="Resources" />
+        <add expressionPrefix="Resources" type="Microsoft.SharePoint.SPResourceExpressionBuilder, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+        <add expressionPrefix="SPHtmlEncodedResources" type="Microsoft.SharePoint.SPHtmlEncodedResourceExpressionBuilder, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+        <add expressionPrefix="SPSimpleFormattingEncodedResources" type="Microsoft.SharePoint.SPSimpleFormattingEncodedResourceExpressionBuilder, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+        <add expressionPrefix="SatelliteResources" type="Microsoft.SharePoint.Search.SPSatelliteResourceExpressionBuilder, Microsoft.SharePoint.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      </expressionBuilders>
+    </compilation>
+    <pages enableSessionState="false" enableViewState="true" enableViewStateMac="true" validateRequest="false" pageParserFilterType="Microsoft.SharePoint.ApplicationRuntime.SPPageParserFilter, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" asyncTimeout="7">
+      <namespaces>
+        <remove namespace="System.Web.UI.WebControls.WebParts" />
+      </namespaces>
+      <tagMapping>
+        <add tagType="System.Web.UI.WebControls.SqlDataSource, System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" mappedTagType="Microsoft.SharePoint.WebControls.SPSqlDataSource, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      </tagMapping>
+      <controls>
+        <add tagPrefix="asp" namespace="System.Web.UI" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+        <add tagPrefix="IdentityManagement" namespace="Microsoft.IdentityManagement.WebUI.Controls" assembly="Microsoft.IdentityManagement.WebUI.Controls, Version=4.1.2273.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+        <add tagPrefix="IdentityManagement" namespace="Microsoft.IdentityManagement.WebUI.Controls" assembly="Microsoft.IdentityManagement.WFExtensionInterfaces, Version=4.1.2273.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      </controls>
+    </pages>
+    <siteMap defaultProvider="SPSiteMapProvider" enabled="true">
+      <providers>
+        <add name="SPNavigationProvider" type="Microsoft.SharePoint.Navigation.SPNavigationProvider, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+        <add name="SPSiteMapProvider" type="Microsoft.SharePoint.Navigation.SPSiteMapProvider, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+        <add name="SPContentMapProvider" type="Microsoft.SharePoint.Navigation.SPContentMapProvider, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+        <add name="SPXmlContentMapProvider" siteMapFile="_app_bin/layouts.sitemap" type="Microsoft.SharePoint.Navigation.SPXmlContentMapProvider, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      </providers>
+    </siteMap>
+    <trust level="WSS_Minimal" originUrl="" />
+    <webParts>
+      <transformers>
+        <add name="TransformableFilterValuesToFilterValuesTransformer" type="Microsoft.SharePoint.WebPartPages.TransformableFilterValuesToFilterValuesTransformer, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+        <add name="TransformableFilterValuesToParametersTransformer" type="Microsoft.SharePoint.WebPartPages.TransformableFilterValuesToParametersTransformer, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+        <add name="TransformableFilterValuesToFieldTransformer" type="Microsoft.SharePoint.WebPartPages.TransformableFilterValuesToFieldTransformer, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      </transformers>
+    </webParts>
+    <machineKey validationKey="517F50E6D47F63C22F9E2AC8CC2F67BAB2195E5EB615068C" decryptionKey="194984DDFACFC0B58DBEFD1EEB166B3FB84DEC100ED8A495" validation="SHA1" />
+  </system.web>
+  <system.webServer>
+    <security>
+      <requestFiltering allowDoubleEscaping="true">
+        <requestLimits maxAllowedContentLength="2147483647" />
+      </requestFiltering>
+    </security>
+    <modules runAllManagedModulesForAllRequests="true">
+      <add name="ILMError" preCondition="integratedMode" type="Microsoft.IdentityManagement.WebUI.Controls.ErrorHandlingModule, Microsoft.IdentityManagement.WebUI.Controls, Version=4.1.2273.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add name="RSRedirectModule" type="Microsoft.ReportingServices.SharePoint.Soap.RSRedirectModule, RSSharePointSoapProxy, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+      <remove name="AnonymousIdentification" />
+      <remove name="FileAuthorization" />
+      <remove name="Profile" />
+      <remove name="Session" />
+      <remove name="WebDAVModule" />
+      <add name="ScriptModule" preCondition="integratedMode" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add name="SharePoint14Module" preCondition="integratedMode" />
+      <add name="SPRequestModule" preCondition="integratedMode" type="Microsoft.SharePoint.ApplicationRuntime.SPRequestModule, Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    </modules>
+    <handlers>
+      <add name="ReportViewerWebPart" verb="*" path="Reserved.ReportViewerWebPart.axd" type="Microsoft.ReportingServices.SharePoint.UI.WebParts.WebPartHttpHandler, Microsoft.ReportingServices.SharePoint.UI.WebParts, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+      <remove name="OPTIONSVerbHandler" />
+      <remove name="svc-Integrated" />
+      <remove name="WebDAV" />
+      <remove name="WebServiceHandlerFactory-Integrated" />
+      <add name="OwssvrHandler" path="/_vti_bin/owssvr.dll" verb="*" modules="IsapiModule" preCondition="integratedMode" scriptProcessor="C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\isapi\owssvr.dll" />
+      <add name="ScriptHandlerFactory" verb="*" path="*.asmx" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add name="ScriptHandlerFactoryAppServices" verb="*" path="*_AppService.axd" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add name="ScriptResource" preCondition="integratedMode" verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add name="svc-Integrated" path="*.svc" verb="*" type="System.ServiceModel.Activation.HttpHandler, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" preCondition="integratedMode" />
+    </handlers>
+    <httpProtocol>
+      <customHeaders>
+        <add name="X-FRAME-Options" value="SameOrigin" />
+        <add name="X-UA-Compatible" value="IE=EmulateIE7" />
+      </customHeaders>
+    </httpProtocol>
+    <validation validateIntegratedModeConfiguration="false" />
+  </system.webServer>
+  <system.serviceModel>
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true" />
+  </system.serviceModel>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.Dsp" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="11.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.Dsp.OleDb" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="11.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.Dsp.SoapPT" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="11.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.Dsp.Sts" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="11.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.Dsp.XmlUrl" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="11.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.intl" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="11.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.Library" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="11.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.Security" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="11.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.Dsp" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="12.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.Dsp.OleDb" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="12.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.Dsp.SoapPT" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="12.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.Dsp.Sts" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="12.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.Dsp.XmlUrl" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="12.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.intl" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="12.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.Library" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="12.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.SharePoint.Security" publicKeyToken="71e9bce111e9429c" culture="neutral" />
+        <bindingRedirect oldVersion="12.0.0.0" newVersion="14.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Extensions" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0" />
+      </dependentAssembly>
+      <qualifyAssembly partialName="Microsoft.SharePoint.WorkflowActions, Version=12.0.0.0, Culture=neutral" fullName="Microsoft.SharePoint.WorkflowActions, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      <qualifyAssembly partialName="Microsoft.SharePoint.WorkflowActions, Version=14.0.0.0, Culture=neutral" fullName="Microsoft.SharePoint.WorkflowActions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+      <probing privatePath="bin;_app_bin" />
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.ReportingServices.SharePoint.UI.WebParts" publicKeyToken="89845dcd8080cc91" culture="neutral" />
+        <bindingRedirect oldVersion="9.0.242.0" newVersion="10.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.Identitymanagement.Activities" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="4.0.0.0-4.65535.65535.65535" newVersion="4.1.2273.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.IdentityManagement.WFExtensionInterfaces" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="4.0.0.0-4.65535.65535.65535" newVersion="4.1.2273.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Microsoft.ResourceManagement" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="4.0.0.0-4.65535.65535.65535" newVersion="4.1.2273.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <location path="_layouts/images">
+    <system.web>
+      <authorization>
+        <allow users="*" />
+      </authorization>
+    </system.web>
+  </location>
+  <location path="_layouts/mobile/mbllogin.aspx">
+    <system.web>
+      <authorization>
+        <allow users="*" />
+      </authorization>
+    </system.web>
+  </location>
+  <location path="_layouts/mobile/mblmultilogin.aspx">
+    <system.web>
+      <authorization>
+        <allow users="*" />
+      </authorization>
+    </system.web>
+  </location>
+  <System.Workflow.ComponentModel.WorkflowCompiler>
+    <authorizedTypes>
+      <authorizedType Assembly="System.Workflow.Activities, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Workflow.*" TypeName="*" Authorized="True" />
+      <authorizedType Assembly="System.Workflow.Activities, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Workflow.*" TypeName="WhileActivity" Authorized="False" />
+      <authorizedType Assembly="System.Workflow.Activities, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Workflow.*" TypeName="ConditionedActivityGroup" Authorized="False" />
+      <authorizedType Assembly="System.Workflow.Activities, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Workflow.*" TypeName="ReplicatorActivity" Authorized="False" />
+      <authorizedType Assembly="System.Workflow.ComponentModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Workflow.*" TypeName="*" Authorized="True" />
+      <authorizedType Assembly="System.Workflow.Runtime, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Workflow.Runtime" TypeName="CorrelationToken" Authorized="True" />
+      <authorizedType Assembly="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Namespace="System" TypeName="Guid" Authorized="True" />
+      <authorizedType Assembly="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Namespace="System" TypeName="DateTime" Authorized="True" />
+      <authorizedType Assembly="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Namespace="System" TypeName="Boolean" Authorized="True" />
+      <authorizedType Assembly="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Namespace="System" TypeName="Double" Authorized="True" />
+      <authorizedType Assembly="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Namespace="System" TypeName="String" Authorized="True" />
+      <authorizedType Assembly="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Namespace="System.Collections" TypeName="Hashtable" Authorized="True" />
+      <authorizedType Assembly="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Namespace="System.Collections" TypeName="ArrayList" Authorized="True" />
+      <authorizedType Assembly="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Namespace="System.Diagnostics" TypeName="DebuggableAttribute" Authorized="True" />
+      <authorizedType Assembly="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Namespace="System.Runtime.CompilerServices" TypeName="CompilationRelaxationsAttribute" Authorized="True" />
+      <authorizedType Assembly="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Namespace="System.Runtime.CompilerServices" TypeName="RuntimeCompatibilityAttribute" Authorized="True" />
+      <authorizedType Assembly="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Namespace="System" TypeName="Int32" Authorized="True" />
+      <authorizedType Assembly="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Namespace="System" TypeName="TimeSpan" Authorized="True" />
+      <authorizedType Assembly="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" Namespace="System.Collections.ObjectModel" TypeName="Collection`1" Authorized="True" />
+      <authorizedType Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Workflow" TypeName="SPWorkflowActivationProperties" Authorized="True" />
+      <authorizedType Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Workflow" TypeName="SPWorkflowTaskProperties" Authorized="True" />
+      <authorizedType Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Workflow" TypeName="SPWorkflowHistoryEventType" Authorized="True" />
+      <authorizedType Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Workflow" TypeName="SPItemKey" Authorized="True" />
+      <authorizedType Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.Workflow" TypeName="SPWorkflowUserContext" Authorized="True" />
+      <authorizedType Assembly="Microsoft.SharePoint.WorkflowActions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" Namespace="Microsoft.SharePoint.WorkflowActions" TypeName="*" Authorized="True" />
+    </authorizedTypes>
+  </System.Workflow.ComponentModel.WorkflowCompiler>
+  <system.net>
+    <defaultProxy />
+  </system.net>
+  <ReportingServices>
+    <DataExtensions>
+      <add key="SHAREPOINTLIST" value="Microsoft.ReportingServices.DataExtensions.SharePointList.SPListConnection, Microsoft.ReportingServices.SharePoint.UI.WebParts, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    </DataExtensions>
+  </ReportingServices>
+  <location path="_vti_bin/ReportServer/ReportServiceAuthentication.asmx">
+    <system.web>
+      <authorization>
+        <allow users="*" />
+      </authorization>
+    </system.web>
+  </location>
+  <reportserver>
+    <redirection>
+      <exclusions>
+        <add path="/_vti_bin/ReportServer/ReportServiceAuthentication.asmx" />
+        <add path="/_vti_bin/ReportServer/ReportServiceAuthenticationdisco.aspx" />
+        <add path="/_vti_bin/ReportServer/ReportServiceAuthenticationwsdl.aspx" />
+      </exclusions>
+    </redirection>
+  </reportserver>
+  <resourceManagementClient resourceManagementServiceBaseAddress="http://r2svc.develop.local:5725" timeoutInMilliseconds="60000" />
+</configuration>

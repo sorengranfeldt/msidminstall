@@ -1,0 +1,2366 @@
+<export-ma server="FIAB01" export-date="2012-01-11 20:35:20.854">
+  <!--WARNING>
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!
+!! The contents of this file should not be edited.
+!! Any such modifications to this file may result in errors during import.
+!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+</WARNING-->
+  <ma-data>
+    <format-version>1</format-version>
+    <id>{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}</id>
+    <name>FIM</name>
+    <category>FIM</category>
+    <subtype />
+    <ma-listname />
+    <ma-companyname />
+    <creation-time>2012-01-11 09:19:46.292</creation-time>
+    <last-modification-time>2012-01-11 20:32:03.632</last-modification-time>
+    <version>3</version>
+    <internal-version>0</internal-version>
+    <password-sync-allowed>0</password-sync-allowed>
+    <schema>
+      <dsml:dsml xmlns:dsml="http://www.dsml.org/DSML" xmlns:ms-dsml="http://www.microsoft.com/MMS/DSML">
+        <dsml:directory-schema ms-dsml:no-objectclass-validation="true">
+          <dsml:class id="DetectedRuleEntry" type="structural">
+            <dsml:name>DetectedRuleEntry</dsml:name>
+            <dsml:attribute ref="#ObjectID" required="false" />
+            <dsml:attribute ref="#Connector" required="true" />
+            <dsml:attribute ref="#CreatedTime" required="false" />
+            <dsml:attribute ref="#Creator" required="false" />
+            <dsml:attribute ref="#DeletedTime" required="false" />
+            <dsml:attribute ref="#Description" required="false" />
+            <dsml:attribute ref="#DetectedRulesList" required="false" />
+            <dsml:attribute ref="#DisplayName" required="false" />
+            <dsml:attribute ref="#ExpectedRulesList" required="false" />
+            <dsml:attribute ref="#ExpirationTime" required="false" />
+            <dsml:attribute ref="#Locale" required="false" />
+            <dsml:attribute ref="#MVObjectID" required="false" />
+            <dsml:attribute ref="#ObjectType" required="false" />
+            <dsml:attribute ref="#ResourceParent" required="false" />
+            <dsml:attribute ref="#ResourceTime" required="false" />
+            <dsml:attribute ref="#SynchronizationRuleID" required="false" />
+          </dsml:class>
+          <dsml:class id="ExpectedRuleEntry" type="structural">
+            <dsml:name>ExpectedRuleEntry</dsml:name>
+            <dsml:attribute ref="#ObjectID" required="false" />
+            <dsml:attribute ref="#CreatedTime" required="false" />
+            <dsml:attribute ref="#Creator" required="false" />
+            <dsml:attribute ref="#DeletedTime" required="false" />
+            <dsml:attribute ref="#Description" required="false" />
+            <dsml:attribute ref="#DetectedRulesList" required="false" />
+            <dsml:attribute ref="#DisplayName" required="false" />
+            <dsml:attribute ref="#ExpectedRuleEntryAction" required="true" />
+            <dsml:attribute ref="#ExpectedRulesList" required="false" />
+            <dsml:attribute ref="#ExpirationTime" required="false" />
+            <dsml:attribute ref="#Locale" required="false" />
+            <dsml:attribute ref="#MVObjectID" required="false" />
+            <dsml:attribute ref="#ObjectType" required="false" />
+            <dsml:attribute ref="#ResourceParent" required="false" />
+            <dsml:attribute ref="#ResourceTime" required="false" />
+            <dsml:attribute ref="#StatusError" required="false" />
+            <dsml:attribute ref="#SynchronizationRuleData" required="false" />
+            <dsml:attribute ref="#SynchronizationRuleID" required="false" />
+            <dsml:attribute ref="#SynchronizationRuleName" required="true" />
+            <dsml:attribute ref="#SynchronizationRuleStatus" required="true" />
+          </dsml:class>
+          <dsml:class id="Group" type="structural">
+            <dsml:name>Group</dsml:name>
+            <dsml:attribute ref="#ObjectID" required="false" />
+            <dsml:attribute ref="#AccountName" required="false" />
+            <dsml:attribute ref="#CreatedTime" required="false" />
+            <dsml:attribute ref="#Creator" required="false" />
+            <dsml:attribute ref="#DeletedTime" required="false" />
+            <dsml:attribute ref="#Description" required="false" />
+            <dsml:attribute ref="#DetectedRulesList" required="false" />
+            <dsml:attribute ref="#DisplayedOwner" required="false" />
+            <dsml:attribute ref="#DisplayName" required="false" />
+            <dsml:attribute ref="#Domain" required="true" />
+            <dsml:attribute ref="#DomainConfiguration" required="false" />
+            <dsml:attribute ref="#Email" required="false" />
+            <dsml:attribute ref="#ExpectedRulesList" required="false" />
+            <dsml:attribute ref="#ExpirationTime" required="false" />
+            <dsml:attribute ref="#Filter" required="false" />
+            <dsml:attribute ref="#Locale" required="false" />
+            <dsml:attribute ref="#MailNickname" required="false" />
+            <dsml:attribute ref="#MembershipAddWorkflow" required="true" />
+            <dsml:attribute ref="#MembershipLocked" required="true" />
+            <dsml:attribute ref="#MVObjectID" required="false" />
+            <dsml:attribute ref="#ObjectSID" required="false" />
+            <dsml:attribute ref="#ObjectType" required="false" />
+            <dsml:attribute ref="#Owner" required="false" />
+            <dsml:attribute ref="#ResourceTime" required="false" />
+            <dsml:attribute ref="#Scope" required="true" />
+            <dsml:attribute ref="#SIDHistory" required="false" />
+            <dsml:attribute ref="#Temporal" required="false" />
+            <dsml:attribute ref="#Type" required="true" />
+            <dsml:attribute ref="#Member" required="false" />
+          </dsml:class>
+          <dsml:class id="Person" type="structural">
+            <dsml:name>Person</dsml:name>
+            <dsml:attribute ref="#ObjectID" required="false" />
+            <dsml:attribute ref="#AccountName" required="false" />
+            <dsml:attribute ref="#AD_UserCannotChangePassword" required="false" />
+            <dsml:attribute ref="#Address" required="false" />
+            <dsml:attribute ref="#Assistant" required="false" />
+            <dsml:attribute ref="#AuthNLockoutRegistrationID" required="false" />
+            <dsml:attribute ref="#AuthNWFLockedOut" required="false" />
+            <dsml:attribute ref="#AuthNWFRegistered" required="false" />
+            <dsml:attribute ref="#City" required="false" />
+            <dsml:attribute ref="#Company" required="false" />
+            <dsml:attribute ref="#CostCenter" required="false" />
+            <dsml:attribute ref="#CostCenterName" required="false" />
+            <dsml:attribute ref="#Country" required="false" />
+            <dsml:attribute ref="#CreatedTime" required="false" />
+            <dsml:attribute ref="#Creator" required="false" />
+            <dsml:attribute ref="#DeletedTime" required="false" />
+            <dsml:attribute ref="#Department" required="false" />
+            <dsml:attribute ref="#Description" required="false" />
+            <dsml:attribute ref="#DetectedRulesList" required="false" />
+            <dsml:attribute ref="#DisplayName" required="false" />
+            <dsml:attribute ref="#Domain" required="false" />
+            <dsml:attribute ref="#DomainConfiguration" required="false" />
+            <dsml:attribute ref="#Email" required="false" />
+            <dsml:attribute ref="#EmployeeEndDate" required="false" />
+            <dsml:attribute ref="#EmployeeID" required="false" />
+            <dsml:attribute ref="#EmployeeStartDate" required="false" />
+            <dsml:attribute ref="#EmployeeType" required="false" />
+            <dsml:attribute ref="#ExpectedRulesList" required="false" />
+            <dsml:attribute ref="#ExpirationTime" required="false" />
+            <dsml:attribute ref="#FirstName" required="false" />
+            <dsml:attribute ref="#FreezeCount" required="false" />
+            <dsml:attribute ref="#FreezeLevel" required="false" />
+            <dsml:attribute ref="#IsRASEnabled" required="false" />
+            <dsml:attribute ref="#JobTitle" required="false" />
+            <dsml:attribute ref="#LastName" required="false" />
+            <dsml:attribute ref="#LastResetAttemptTime" required="false" />
+            <dsml:attribute ref="#Locale" required="false" />
+            <dsml:attribute ref="#LoginName" required="false" />
+            <dsml:attribute ref="#MailNickname" required="false" />
+            <dsml:attribute ref="#Manager" required="false" />
+            <dsml:attribute ref="#MiddleName" required="false" />
+            <dsml:attribute ref="#MobilePhone" required="false" />
+            <dsml:attribute ref="#MVObjectID" required="false" />
+            <dsml:attribute ref="#ObjectSID" required="false" />
+            <dsml:attribute ref="#ObjectType" required="false" />
+            <dsml:attribute ref="#OfficeFax" required="false" />
+            <dsml:attribute ref="#OfficeLocation" required="false" />
+            <dsml:attribute ref="#OfficePhone" required="false" />
+            <dsml:attribute ref="#Photo" required="false" />
+            <dsml:attribute ref="#PostalCode" required="false" />
+            <dsml:attribute ref="#ProxyAddressCollection" required="false" />
+            <dsml:attribute ref="#Register" required="false" />
+            <dsml:attribute ref="#RegistrationRequired" required="false" />
+            <dsml:attribute ref="#ResetPassword" required="false" />
+            <dsml:attribute ref="#ResourceTime" required="false" />
+            <dsml:attribute ref="#SIDHistory" required="false" />
+            <dsml:attribute ref="#TimeZone" required="false" />
+          </dsml:class>
+          <dsml:class id="SynchronizationRule" type="structural">
+            <dsml:name>SynchronizationRule</dsml:name>
+            <dsml:attribute ref="#ObjectID" required="false" />
+            <dsml:attribute ref="#ConnectedObjectType" required="true" />
+            <dsml:attribute ref="#ConnectedSystem" required="true" />
+            <dsml:attribute ref="#ConnectedSystemScope" required="false" />
+            <dsml:attribute ref="#CreateConnectedSystemObject" required="true" />
+            <dsml:attribute ref="#CreatedTime" required="false" />
+            <dsml:attribute ref="#CreateILMObject" required="true" />
+            <dsml:attribute ref="#Creator" required="false" />
+            <dsml:attribute ref="#DeletedTime" required="false" />
+            <dsml:attribute ref="#Dependency" required="false" />
+            <dsml:attribute ref="#Description" required="false" />
+            <dsml:attribute ref="#DetectedRulesList" required="false" />
+            <dsml:attribute ref="#DisconnectConnectedSystemObject" required="true" />
+            <dsml:attribute ref="#DisplayName" required="false" />
+            <dsml:attribute ref="#ExistenceTest" required="false" />
+            <dsml:attribute ref="#ExpectedRulesList" required="false" />
+            <dsml:attribute ref="#ExpirationTime" required="false" />
+            <dsml:attribute ref="#FlowType" required="true" />
+            <dsml:attribute ref="#ILMObjectType" required="true" />
+            <dsml:attribute ref="#InitialFlow" required="false" />
+            <dsml:attribute ref="#Locale" required="false" />
+            <dsml:attribute ref="#MVObjectID" required="false" />
+            <dsml:attribute ref="#ObjectType" required="false" />
+            <dsml:attribute ref="#PersistentFlow" required="false" />
+            <dsml:attribute ref="#Precedence" required="false" />
+            <dsml:attribute ref="#RelationshipCriteria" required="true" />
+            <dsml:attribute ref="#ResourceTime" required="false" />
+            <dsml:attribute ref="#SynchronizationRuleParameters" required="false" />
+            <dsml:attribute ref="#ManagementAgentID" required="false" />
+          </dsml:class>
+          <dsml:attribute-type id="ObjectID" single-value="true" isreadonly="true" ms-dsml:immutable="true">
+            <dsml:name>ObjectID</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Connector" single-value="true">
+            <dsml:name>Connector</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="CreatedTime" single-value="true" isreadonly="true">
+            <dsml:name>CreatedTime</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Creator" single-value="true" isreadonly="true">
+            <dsml:name>Creator</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="DeletedTime" single-value="true" isreadonly="true">
+            <dsml:name>DeletedTime</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Description" single-value="true">
+            <dsml:name>Description</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="DetectedRulesList" single-value="false">
+            <dsml:name>DetectedRulesList</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="DisplayName" single-value="true">
+            <dsml:name>DisplayName</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ExpectedRulesList" single-value="false">
+            <dsml:name>ExpectedRulesList</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ExpirationTime" single-value="true">
+            <dsml:name>ExpirationTime</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Locale" single-value="true" isreadonly="true">
+            <dsml:name>Locale</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="MVObjectID" single-value="true">
+            <dsml:name>MVObjectID</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ObjectType" single-value="true" isreadonly="true">
+            <dsml:name>ObjectType</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ResourceParent" single-value="true">
+            <dsml:name>ResourceParent</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ResourceTime" single-value="true" isreadonly="true">
+            <dsml:name>ResourceTime</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="SynchronizationRuleID" single-value="true">
+            <dsml:name>SynchronizationRuleID</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ExpectedRuleEntryAction" single-value="true">
+            <dsml:name>ExpectedRuleEntryAction</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="StatusError" single-value="true">
+            <dsml:name>StatusError</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="SynchronizationRuleData" single-value="false">
+            <dsml:name>SynchronizationRuleData</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="SynchronizationRuleName" single-value="true">
+            <dsml:name>SynchronizationRuleName</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="SynchronizationRuleStatus" single-value="true">
+            <dsml:name>SynchronizationRuleStatus</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="AccountName" single-value="true">
+            <dsml:name>AccountName</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="DisplayedOwner" single-value="true">
+            <dsml:name>DisplayedOwner</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Domain" single-value="true">
+            <dsml:name>Domain</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="DomainConfiguration" single-value="true">
+            <dsml:name>DomainConfiguration</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Email" single-value="true">
+            <dsml:name>Email</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Filter" single-value="true">
+            <dsml:name>Filter</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="MailNickname" single-value="true">
+            <dsml:name>MailNickname</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="MembershipAddWorkflow" single-value="true">
+            <dsml:name>MembershipAddWorkflow</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="MembershipLocked" single-value="true">
+            <dsml:name>MembershipLocked</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ObjectSID" single-value="true">
+            <dsml:name>ObjectSID</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.5</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Owner" single-value="false">
+            <dsml:name>Owner</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Scope" single-value="true">
+            <dsml:name>Scope</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="SIDHistory" single-value="false">
+            <dsml:name>SIDHistory</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.5</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Temporal" single-value="true">
+            <dsml:name>Temporal</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Type" single-value="true">
+            <dsml:name>Type</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Member" single-value="false">
+            <dsml:name>Member</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="AD_UserCannotChangePassword" single-value="true">
+            <dsml:name>AD_UserCannotChangePassword</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Address" single-value="true">
+            <dsml:name>Address</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Assistant" single-value="true">
+            <dsml:name>Assistant</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="AuthNLockoutRegistrationID" single-value="false">
+            <dsml:name>AuthNLockoutRegistrationID</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="AuthNWFLockedOut" single-value="false">
+            <dsml:name>AuthNWFLockedOut</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="AuthNWFRegistered" single-value="false">
+            <dsml:name>AuthNWFRegistered</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="City" single-value="true">
+            <dsml:name>City</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Company" single-value="true">
+            <dsml:name>Company</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="CostCenter" single-value="true">
+            <dsml:name>CostCenter</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="CostCenterName" single-value="true">
+            <dsml:name>CostCenterName</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Country" single-value="true">
+            <dsml:name>Country</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Department" single-value="true">
+            <dsml:name>Department</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="EmployeeEndDate" single-value="true">
+            <dsml:name>EmployeeEndDate</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="EmployeeID" single-value="true">
+            <dsml:name>EmployeeID</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="EmployeeStartDate" single-value="true">
+            <dsml:name>EmployeeStartDate</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="EmployeeType" single-value="true">
+            <dsml:name>EmployeeType</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="FirstName" single-value="true">
+            <dsml:name>FirstName</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="FreezeCount" single-value="true">
+            <dsml:name>FreezeCount</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="FreezeLevel" single-value="true">
+            <dsml:name>FreezeLevel</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="IsRASEnabled" single-value="true">
+            <dsml:name>IsRASEnabled</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="JobTitle" single-value="true">
+            <dsml:name>JobTitle</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="LastName" single-value="true">
+            <dsml:name>LastName</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="LastResetAttemptTime" single-value="true">
+            <dsml:name>LastResetAttemptTime</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="LoginName" single-value="true">
+            <dsml:name>LoginName</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Manager" single-value="true">
+            <dsml:name>Manager</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="MiddleName" single-value="true">
+            <dsml:name>MiddleName</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="MobilePhone" single-value="true">
+            <dsml:name>MobilePhone</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="OfficeFax" single-value="true">
+            <dsml:name>OfficeFax</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="OfficeLocation" single-value="true">
+            <dsml:name>OfficeLocation</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="OfficePhone" single-value="true">
+            <dsml:name>OfficePhone</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Photo" single-value="true">
+            <dsml:name>Photo</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.5</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="PostalCode" single-value="true">
+            <dsml:name>PostalCode</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ProxyAddressCollection" single-value="false">
+            <dsml:name>ProxyAddressCollection</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Register" single-value="true">
+            <dsml:name>Register</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="RegistrationRequired" single-value="true">
+            <dsml:name>RegistrationRequired</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ResetPassword" single-value="true">
+            <dsml:name>ResetPassword</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="TimeZone" single-value="true">
+            <dsml:name>TimeZone</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ConnectedObjectType" single-value="true">
+            <dsml:name>ConnectedObjectType</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ConnectedSystem" single-value="true">
+            <dsml:name>ConnectedSystem</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ConnectedSystemScope" single-value="true">
+            <dsml:name>ConnectedSystemScope</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="CreateConnectedSystemObject" single-value="true">
+            <dsml:name>CreateConnectedSystemObject</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="CreateILMObject" single-value="true">
+            <dsml:name>CreateILMObject</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Dependency" single-value="true">
+            <dsml:name>Dependency</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="DisconnectConnectedSystemObject" single-value="true">
+            <dsml:name>DisconnectConnectedSystemObject</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.7</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ExistenceTest" single-value="false">
+            <dsml:name>ExistenceTest</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="FlowType" single-value="true">
+            <dsml:name>FlowType</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ILMObjectType" single-value="true">
+            <dsml:name>ILMObjectType</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="InitialFlow" single-value="false">
+            <dsml:name>InitialFlow</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="PersistentFlow" single-value="false">
+            <dsml:name>PersistentFlow</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="Precedence" single-value="true">
+            <dsml:name>Precedence</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.27</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="RelationshipCriteria" single-value="true">
+            <dsml:name>RelationshipCriteria</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="SynchronizationRuleParameters" single-value="false">
+            <dsml:name>SynchronizationRuleParameters</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.15</dsml:syntax>
+          </dsml:attribute-type>
+          <dsml:attribute-type id="ManagementAgentID" single-value="true">
+            <dsml:name>ManagementAgentID</dsml:name>
+            <dsml:syntax>1.3.6.1.4.1.1466.115.121.1.12</dsml:syntax>
+          </dsml:attribute-type>
+        </dsml:directory-schema>
+      </dsml:dsml>
+    </schema>
+    <attribute-inclusion>
+      <attribute>AccountName</attribute>
+      <attribute>AD_UserCannotChangePassword</attribute>
+      <attribute>Address</attribute>
+      <attribute>Assistant</attribute>
+      <attribute>AuthNLockoutRegistrationID</attribute>
+      <attribute>AuthNWFLockedOut</attribute>
+      <attribute>AuthNWFRegistered</attribute>
+      <attribute>City</attribute>
+      <attribute>Company</attribute>
+      <attribute>ConnectedObjectType</attribute>
+      <attribute>ConnectedSystem</attribute>
+      <attribute>ConnectedSystemScope</attribute>
+      <attribute>Connector</attribute>
+      <attribute>CostCenter</attribute>
+      <attribute>CostCenterName</attribute>
+      <attribute>Country</attribute>
+      <attribute>CreateConnectedSystemObject</attribute>
+      <attribute>CreatedTime</attribute>
+      <attribute>CreateILMObject</attribute>
+      <attribute>Creator</attribute>
+      <attribute>DeletedTime</attribute>
+      <attribute>Department</attribute>
+      <attribute>Dependency</attribute>
+      <attribute>Description</attribute>
+      <attribute>DetectedRulesList</attribute>
+      <attribute>DisconnectConnectedSystemObject</attribute>
+      <attribute>DisplayedOwner</attribute>
+      <attribute>DisplayName</attribute>
+      <attribute>Domain</attribute>
+      <attribute>DomainConfiguration</attribute>
+      <attribute>Email</attribute>
+      <attribute>EmployeeEndDate</attribute>
+      <attribute>EmployeeID</attribute>
+      <attribute>EmployeeStartDate</attribute>
+      <attribute>EmployeeType</attribute>
+      <attribute>ExistenceTest</attribute>
+      <attribute>ExpectedRuleEntryAction</attribute>
+      <attribute>ExpectedRulesList</attribute>
+      <attribute>ExpirationTime</attribute>
+      <attribute>Filter</attribute>
+      <attribute>FirstName</attribute>
+      <attribute>FlowType</attribute>
+      <attribute>FreezeCount</attribute>
+      <attribute>FreezeLevel</attribute>
+      <attribute>ILMObjectType</attribute>
+      <attribute>InitialFlow</attribute>
+      <attribute>IsRASEnabled</attribute>
+      <attribute>JobTitle</attribute>
+      <attribute>LastName</attribute>
+      <attribute>LastResetAttemptTime</attribute>
+      <attribute>Locale</attribute>
+      <attribute>LoginName</attribute>
+      <attribute>MailNickname</attribute>
+      <attribute>ManagementAgentID</attribute>
+      <attribute>Manager</attribute>
+      <attribute>Member</attribute>
+      <attribute>MembershipAddWorkflow</attribute>
+      <attribute>MembershipLocked</attribute>
+      <attribute>MiddleName</attribute>
+      <attribute>MobilePhone</attribute>
+      <attribute>MVObjectID</attribute>
+      <attribute>ObjectID</attribute>
+      <attribute>ObjectSID</attribute>
+      <attribute>ObjectType</attribute>
+      <attribute>OfficeFax</attribute>
+      <attribute>OfficeLocation</attribute>
+      <attribute>OfficePhone</attribute>
+      <attribute>Owner</attribute>
+      <attribute>PersistentFlow</attribute>
+      <attribute>Photo</attribute>
+      <attribute>PostalCode</attribute>
+      <attribute>Precedence</attribute>
+      <attribute>ProxyAddressCollection</attribute>
+      <attribute>Register</attribute>
+      <attribute>RegistrationRequired</attribute>
+      <attribute>RelationshipCriteria</attribute>
+      <attribute>ResetPassword</attribute>
+      <attribute>ResourceParent</attribute>
+      <attribute>ResourceTime</attribute>
+      <attribute>Scope</attribute>
+      <attribute>SIDHistory</attribute>
+      <attribute>StatusError</attribute>
+      <attribute>SynchronizationRuleData</attribute>
+      <attribute>SynchronizationRuleID</attribute>
+      <attribute>SynchronizationRuleName</attribute>
+      <attribute>SynchronizationRuleParameters</attribute>
+      <attribute>SynchronizationRuleStatus</attribute>
+      <attribute>Temporal</attribute>
+      <attribute>TimeZone</attribute>
+      <attribute>Type</attribute>
+    </attribute-inclusion>
+    <stay-disconnector />
+    <join>
+      <join-profile cd-object-type="DetectedRuleEntry">
+        <join-criterion id="{253C2391-C03D-4053-9285-2025E381C290}">
+          <search mv-object-type="detectedRuleEntry">
+            <attribute-mapping mv-attribute="csObjectID">
+              <direct-mapping>
+                <src-attribute intrinsic="true">dn</src-attribute>
+              </direct-mapping>
+            </attribute-mapping>
+          </search>
+          <resolution type="none">
+            <script-context>
+            </script-context>
+          </resolution>
+        </join-criterion>
+        <join-criterion id="{68DFE613-D1F4-4AA2-B21C-E19DC1B16E18}">
+          <search mv-object-type="detectedRuleEntry">
+            <attribute-mapping mv-attribute="object-id" intrinsic-attribute="true">
+              <direct-mapping>
+                <src-attribute>MVObjectID</src-attribute>
+              </direct-mapping>
+            </attribute-mapping>
+          </search>
+          <resolution type="none">
+            <script-context>
+            </script-context>
+          </resolution>
+        </join-criterion>
+      </join-profile>
+      <join-profile cd-object-type="ExpectedRuleEntry">
+        <join-criterion id="{F33DDAC1-EB3C-41BA-8C9A-C9FFACA9AB7F}">
+          <search mv-object-type="expectedRuleEntry">
+            <attribute-mapping mv-attribute="csObjectID">
+              <direct-mapping>
+                <src-attribute intrinsic="true">dn</src-attribute>
+              </direct-mapping>
+            </attribute-mapping>
+          </search>
+          <resolution type="none">
+            <script-context>
+            </script-context>
+          </resolution>
+        </join-criterion>
+        <join-criterion id="{BDA945C8-3831-4ED3-A5F1-7B0B63867EB9}">
+          <search mv-object-type="expectedRuleEntry">
+            <attribute-mapping mv-attribute="object-id" intrinsic-attribute="true">
+              <direct-mapping>
+                <src-attribute>MVObjectID</src-attribute>
+              </direct-mapping>
+            </attribute-mapping>
+          </search>
+          <resolution type="none">
+            <script-context>
+            </script-context>
+          </resolution>
+        </join-criterion>
+      </join-profile>
+      <join-profile cd-object-type="Group">
+        <join-criterion id="{3ADBCB2F-7DEE-4D3B-95E5-CC94EA7D7385}">
+          <search mv-object-type="group">
+            <attribute-mapping mv-attribute="csObjectID">
+              <direct-mapping>
+                <src-attribute intrinsic="true">dn</src-attribute>
+              </direct-mapping>
+            </attribute-mapping>
+          </search>
+          <resolution type="none">
+            <script-context>
+            </script-context>
+          </resolution>
+        </join-criterion>
+        <join-criterion id="{18C116D5-C481-4A60-8970-AFB06F9869BF}">
+          <search mv-object-type="group">
+            <attribute-mapping mv-attribute="object-id" intrinsic-attribute="true">
+              <direct-mapping>
+                <src-attribute>MVObjectID</src-attribute>
+              </direct-mapping>
+            </attribute-mapping>
+          </search>
+          <resolution type="none">
+            <script-context>
+            </script-context>
+          </resolution>
+        </join-criterion>
+      </join-profile>
+      <join-profile cd-object-type="Person">
+        <join-criterion id="{62F1BF1B-0AFE-44D7-8162-834D70BE2D38}">
+          <search mv-object-type="person">
+            <attribute-mapping mv-attribute="csObjectID">
+              <direct-mapping>
+                <src-attribute intrinsic="true">dn</src-attribute>
+              </direct-mapping>
+            </attribute-mapping>
+          </search>
+          <resolution type="none">
+            <script-context>
+            </script-context>
+          </resolution>
+        </join-criterion>
+        <join-criterion id="{2FA31C56-21DD-4873-AA5B-DB41874331C4}">
+          <search mv-object-type="person">
+            <attribute-mapping mv-attribute="object-id" intrinsic-attribute="true">
+              <direct-mapping>
+                <src-attribute>MVObjectID</src-attribute>
+              </direct-mapping>
+            </attribute-mapping>
+          </search>
+          <resolution type="none">
+            <script-context>
+            </script-context>
+          </resolution>
+        </join-criterion>
+      </join-profile>
+      <join-profile cd-object-type="SynchronizationRule">
+        <join-criterion id="{F3A88CC7-9FD6-451C-8266-CB8EDCDCD0A7}">
+          <search mv-object-type="synchronizationRule">
+            <attribute-mapping mv-attribute="csObjectID">
+              <direct-mapping>
+                <src-attribute intrinsic="true">dn</src-attribute>
+              </direct-mapping>
+            </attribute-mapping>
+          </search>
+          <resolution type="none">
+            <script-context>
+            </script-context>
+          </resolution>
+        </join-criterion>
+        <join-criterion id="{5E860122-ACBA-41EC-B89E-1D23F25886DA}">
+          <search mv-object-type="synchronizationRule">
+            <attribute-mapping mv-attribute="object-id" intrinsic-attribute="true">
+              <direct-mapping>
+                <src-attribute>MVObjectID</src-attribute>
+              </direct-mapping>
+            </attribute-mapping>
+          </search>
+          <resolution type="none">
+            <script-context>
+            </script-context>
+          </resolution>
+        </join-criterion>
+      </join-profile>
+    </join>
+    <projection>
+      <class-mapping type="declared" id="{EC4CB68B-D058-4541-BAC4-D38C11AE401B}" cd-object-type="DetectedRuleEntry">
+        <mv-object-type>detectedRuleEntry</mv-object-type>
+      </class-mapping>
+      <class-mapping type="declared" id="{FC3EEE55-CDC7-489E-A31A-C1D9AEEEBCDF}" cd-object-type="ExpectedRuleEntry">
+        <mv-object-type>expectedRuleEntry</mv-object-type>
+      </class-mapping>
+      <class-mapping type="declared" id="{8AA6C9B2-879B-47B7-AB1D-4CF8E234F0E5}" cd-object-type="Group">
+        <mv-object-type>group</mv-object-type>
+      </class-mapping>
+      <class-mapping type="declared" id="{7E028F0B-BB5F-4B95-BDBE-BA7A54D713A1}" cd-object-type="Person">
+        <mv-object-type>person</mv-object-type>
+      </class-mapping>
+      <class-mapping type="declared" id="{7BB3CC45-B352-4B97-AB62-98221A236A36}" cd-object-type="SynchronizationRule">
+        <mv-object-type>synchronizationRule</mv-object-type>
+      </class-mapping>
+    </projection>
+    <export-attribute-flow>
+      <export-flow-set cd-object-type="DetectedRuleEntry" mv-object-type="detectedRuleEntry">
+        <export-flow cd-attribute="SynchronizationRuleID" id="{75DC72F5-C589-4D9B-9C2D-AED8F1C7B26E}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute>synchronizationRuleID</src-attribute>
+          </direct-mapping>
+        </export-flow>
+        <export-flow cd-attribute="DisplayName" id="{F1C79CA7-B79F-492F-BBCA-BFE08A99EAF7}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute>displayName</src-attribute>
+          </direct-mapping>
+        </export-flow>
+        <export-flow cd-attribute="Connector" id="{B5C8D6EF-2C35-4B91-9E51-EBB70B2421CA}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute>connector</src-attribute>
+          </direct-mapping>
+        </export-flow>
+        <export-flow cd-attribute="ResourceParent" id="{3DFE5B35-0EDB-4966-B81F-CBCF5DA63A12}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute>resourceParent</src-attribute>
+          </direct-mapping>
+        </export-flow>
+        <export-flow cd-attribute="dn" id="{F84C21E1-908F-4E65-9562-E03D29287FFE}">
+          <sync-rule-mapping mapping-type="expression" sync-rule-id="{F6000260-F58A-4318-9E80-DE46D2CC80DB}" sync-rule-mapping-id="{F6000260-F58A-4318-9E80-DE46D2CC80DB}" initial-flow-only="true">
+            <sync-rule-value>
+              <export-flow>
+                <dest>dn</dest>
+                <src>
+                  <attr />
+                </src>
+                <fn id="Guid" />
+              </export-flow>
+            </sync-rule-value>
+          </sync-rule-mapping>
+        </export-flow>
+        <export-flow cd-attribute="MVObjectID" id="{5FCB953F-4042-4A81-BA81-59B011EA535F}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute intrinsic="true">object-id</src-attribute>
+          </direct-mapping>
+        </export-flow>
+      </export-flow-set>
+      <export-flow-set cd-object-type="ExpectedRuleEntry" mv-object-type="expectedRuleEntry">
+        <export-flow cd-attribute="StatusError" id="{89111934-D891-4A75-BAA9-1AC2EB0E3CB7}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute>statusError</src-attribute>
+          </direct-mapping>
+        </export-flow>
+        <export-flow cd-attribute="SynchronizationRuleStatus" id="{9456373E-EE0F-4A20-882C-E3B8886FDD0B}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute>status</src-attribute>
+          </direct-mapping>
+        </export-flow>
+      </export-flow-set>
+      <export-flow-set cd-object-type="Group" mv-object-type="group">
+        <export-flow cd-attribute="dn" id="{A56A9AF3-8AE5-4B9B-8848-A0C1DB0B0250}">
+          <sync-rule-mapping mapping-type="expression" sync-rule-id="{434C132C-DB32-4F39-919F-1444075BA685}" sync-rule-mapping-id="{434C132C-DB32-4F39-919F-1444075BA685}" initial-flow-only="true">
+            <sync-rule-value>
+              <export-flow>
+                <dest>dn</dest>
+                <src>
+                  <attr />
+                </src>
+                <fn id="Guid" />
+              </export-flow>
+            </sync-rule-value>
+          </sync-rule-mapping>
+        </export-flow>
+        <export-flow cd-attribute="MVObjectID" id="{73AB2D36-898B-4E0D-A041-70E6CA88549C}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute intrinsic="true">object-id</src-attribute>
+          </direct-mapping>
+        </export-flow>
+      </export-flow-set>
+      <export-flow-set cd-object-type="Person" mv-object-type="person">
+        <export-flow cd-attribute="dn" id="{56D6C039-2699-4BAC-BED0-C104F8A5F218}">
+          <sync-rule-mapping mapping-type="expression" sync-rule-id="{C3FF5E04-FAC3-4ADA-B504-D0F5FF8BCA34}" sync-rule-mapping-id="{C3FF5E04-FAC3-4ADA-B504-D0F5FF8BCA34}" initial-flow-only="true">
+            <sync-rule-value>
+              <export-flow>
+                <dest>dn</dest>
+                <src>
+                  <attr />
+                </src>
+                <fn id="Guid" />
+              </export-flow>
+            </sync-rule-value>
+          </sync-rule-mapping>
+        </export-flow>
+        <export-flow cd-attribute="MVObjectID" id="{685E8A7C-351F-42F3-982F-E461C382565B}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute intrinsic="true">object-id</src-attribute>
+          </direct-mapping>
+        </export-flow>
+        <export-flow cd-attribute="Domain" id="{46B63BBF-774F-4E1C-B9E5-5710E941815B}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute>domain</src-attribute>
+          </direct-mapping>
+        </export-flow>
+        <export-flow cd-attribute="ObjectSID" id="{D1A13220-041A-4B17-8F82-B843F3660421}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute>objectSid</src-attribute>
+          </direct-mapping>
+        </export-flow>
+        <export-flow cd-attribute="AccountName" id="{9D9E0846-72C2-4547-835A-9B5403B3E16F}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute>accountName</src-attribute>
+          </direct-mapping>
+        </export-flow>
+        <export-flow cd-attribute="LastName" id="{59872807-5D8C-4DAB-B11E-CF44A7A5CE5B}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute>lastName</src-attribute>
+          </direct-mapping>
+        </export-flow>
+        <export-flow cd-attribute="FirstName" id="{25096A1B-21DD-45EB-AD55-BE25E8C398C2}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute>firstName</src-attribute>
+          </direct-mapping>
+        </export-flow>
+        <export-flow cd-attribute="DisplayName" id="{4B9DE558-78AA-4D09-9E78-F4FFE8F264CF}" suppress-deletions="true">
+          <direct-mapping>
+            <src-attribute>displayName</src-attribute>
+          </direct-mapping>
+        </export-flow>
+      </export-flow-set>
+    </export-attribute-flow>
+    <provisioning-cleanup type="declared">
+      <action>make-normal-disconnector</action>
+    </provisioning-cleanup>
+    <extension />
+    <controller-configuration>
+      <application-protection>low</application-protection>
+      <application-architecture>process</application-architecture>
+    </controller-configuration>
+    <description>
+    </description>
+    <ma-ui-settings>
+      <account-joiner-queries>
+        <attributes>
+          <cs>
+          </cs>
+          <mv>
+          </mv>
+        </attributes>
+        <filters max_mv_search_results="">
+        </filters>
+      </account-joiner-queries>
+    </ma-ui-settings>
+    <private-configuration>
+      <fimma-configuration>
+        <mms-info>
+          <column-info name="DetectedRuleEntry">
+            <column>
+              <name>ObjectID</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Connector</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>CreatedTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Creator</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>DeletedTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Description</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>DetectedRulesList</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>DisplayName</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ExpectedRulesList</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>ExpirationTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Locale</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>MVObjectID</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ObjectType</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ResourceParent</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ResourceTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>SynchronizationRuleID</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+          </column-info>
+          <column-info name="ExpectedRuleEntry">
+            <column>
+              <name>ObjectID</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>CreatedTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Creator</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>DeletedTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Description</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>DetectedRulesList</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>DisplayName</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ExpectedRuleEntryAction</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ExpectedRulesList</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>ExpirationTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Locale</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>MVObjectID</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ObjectType</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ResourceParent</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ResourceTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>StatusError</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>SynchronizationRuleData</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>SynchronizationRuleID</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>SynchronizationRuleName</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>SynchronizationRuleStatus</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+          </column-info>
+          <column-info name="Group" isDynamic="1">
+            <column>
+              <name>ObjectID</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>AccountName</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>CreatedTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Creator</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>DeletedTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Description</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>DetectedRulesList</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>DisplayedOwner</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>DisplayName</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Domain</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>DomainConfiguration</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Email</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ExpectedRulesList</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>ExpirationTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Filter</name>
+              <data-type>Text</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Locale</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>MailNickname</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>MembershipAddWorkflow</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>MembershipLocked</name>
+              <data-type>Boolean</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>MVObjectID</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ObjectSID</name>
+              <data-type>Binary</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ObjectType</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Owner</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>ResourceTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Scope</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>SIDHistory</name>
+              <data-type>Binary</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>Temporal</name>
+              <data-type>Boolean</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Type</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Member</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+          </column-info>
+          <column-info name="Person">
+            <column>
+              <name>ObjectID</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>AccountName</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>AD_UserCannotChangePassword</name>
+              <data-type>Boolean</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Address</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Assistant</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>AuthNLockoutRegistrationID</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>AuthNWFLockedOut</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>AuthNWFRegistered</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>City</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Company</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>CostCenter</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>CostCenterName</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Country</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>CreatedTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Creator</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>DeletedTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Department</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Description</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>DetectedRulesList</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>DisplayName</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Domain</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>DomainConfiguration</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Email</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>EmployeeEndDate</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>EmployeeID</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>EmployeeStartDate</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>EmployeeType</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ExpectedRulesList</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>ExpirationTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>FirstName</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>FreezeCount</name>
+              <data-type>Integer</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>FreezeLevel</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>IsRASEnabled</name>
+              <data-type>Boolean</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>JobTitle</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>LastName</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>LastResetAttemptTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Locale</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>LoginName</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>MailNickname</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Manager</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>MiddleName</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>MobilePhone</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>MVObjectID</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ObjectSID</name>
+              <data-type>Binary</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ObjectType</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>OfficeFax</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>OfficeLocation</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>OfficePhone</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Photo</name>
+              <data-type>Binary</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>PostalCode</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ProxyAddressCollection</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>Register</name>
+              <data-type>Boolean</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>RegistrationRequired</name>
+              <data-type>Boolean</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ResetPassword</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ResourceTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>SIDHistory</name>
+              <data-type>Binary</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>TimeZone</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+          </column-info>
+          <column-info name="SynchronizationRule">
+            <column>
+              <name>ObjectID</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ConnectedObjectType</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ConnectedSystem</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ConnectedSystemScope</name>
+              <data-type>Text</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>CreateConnectedSystemObject</name>
+              <data-type>Boolean</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>CreatedTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>CreateILMObject</name>
+              <data-type>Boolean</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Creator</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>DeletedTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Dependency</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>Description</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>DetectedRulesList</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>DisconnectConnectedSystemObject</name>
+              <data-type>Boolean</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>DisplayName</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ExistenceTest</name>
+              <data-type>Text</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>ExpectedRulesList</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>ExpirationTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>FlowType</name>
+              <data-type>Integer</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ILMObjectType</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>InitialFlow</name>
+              <data-type>Text</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>Locale</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>MVObjectID</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ObjectType</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>PersistentFlow</name>
+              <data-type>Text</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>Precedence</name>
+              <data-type>Integer</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>RelationshipCriteria</name>
+              <data-type>String</data-type>
+              <isrequired>1</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>ResourceTime</name>
+              <data-type>DateTime</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+            <column>
+              <name>SynchronizationRuleParameters</name>
+              <data-type>String</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>1</ismultivalued>
+            </column>
+            <column>
+              <name>ManagementAgentID</name>
+              <data-type>Reference</data-type>
+              <isrequired>0</isrequired>
+              <ismultivalued>0</ismultivalued>
+            </column>
+          </column-info>
+        </mms-info>
+        <connection-info>
+          <server>FIMBOX01</server>
+          <databasename>FIMService</databasename>
+          <authentication>integrated</authentication>
+          <user>SVC-FIMMA</user>
+          <domain>R2TEST</domain>
+          <serviceHost>http://fimsvc.r2test.intern:5725</serviceHost>
+        </connection-info>
+        <watermark>00000000-0000-0000-0000-000000000000</watermark>
+      </fimma-configuration>
+    </private-configuration>
+    <SyncConfig-refresh-schema>0</SyncConfig-refresh-schema>
+    <ma-partition-data>
+      <partition>
+        <id>{888C6594-BE1B-4B29-8B6D-6E218D2161F5}</id>
+        <name>default</name>
+        <creation-time>2012-01-11 09:19:46.293</creation-time>
+        <last-modification-time>2012-01-11 20:32:03.623</last-modification-time>
+        <version>2</version>
+        <selected>1</selected>
+        <filter>
+          <object-classes>
+            <object-class>DetectedRuleEntry</object-class>
+            <object-class>ExpectedRuleEntry</object-class>
+            <object-class>Group</object-class>
+            <object-class>Person</object-class>
+            <object-class>SynchronizationRule</object-class>
+          </object-classes>
+          <containers>
+            <exclusions />
+            <inclusions>
+              <inclusion>
+              </inclusion>
+            </inclusions>
+          </containers>
+        </filter>
+        <allowed-operations>25</allowed-operations>
+        <current>
+          <batch-number>1</batch-number>
+          <sequence-number>0</sequence-number>
+        </current>
+        <last-successful-batch>0</last-successful-batch>
+        <filter-hints>
+          <object-classes>
+            <object-class>
+              <name>DetectedRuleEntry</name>
+              <hierarchy>
+                <object-class>DetectedRuleEntry</object-class>
+              </hierarchy>
+              <included>1</included>
+            </object-class>
+            <object-class>
+              <name>ExpectedRuleEntry</name>
+              <hierarchy>
+                <object-class>ExpectedRuleEntry</object-class>
+              </hierarchy>
+              <included>1</included>
+            </object-class>
+            <object-class>
+              <name>Group</name>
+              <hierarchy>
+                <object-class>Group</object-class>
+              </hierarchy>
+              <included>1</included>
+            </object-class>
+            <object-class>
+              <name>Person</name>
+              <hierarchy>
+                <object-class>Person</object-class>
+              </hierarchy>
+              <included>1</included>
+            </object-class>
+            <object-class>
+              <name>SynchronizationRule</name>
+              <hierarchy>
+                <object-class>SynchronizationRule</object-class>
+              </hierarchy>
+              <included>1</included>
+            </object-class>
+          </object-classes>
+        </filter-hints>
+      </partition>
+    </ma-partition-data>
+    <ma-run-data>
+      <run-configuration>
+        <id>{CFE842EE-F048-496D-904A-E4B21F0FE3DC}</id>
+        <name>FI</name>
+        <creation-time>2012-01-11 09:21:05.890</creation-time>
+        <version>1</version>
+        <last-modification-time>2012-01-11 09:21:05.890</last-modification-time>
+        <configuration>
+          <step>
+            <step-type type="full-import">
+              <import-subtype>to-cs</import-subtype>
+            </step-type>
+            <threshold>
+            </threshold>
+            <partition>{888C6594-BE1B-4B29-8B6D-6E218D2161F5}</partition>
+            <custom-data>
+            </custom-data>
+          </step>
+        </configuration>
+      </run-configuration>
+      <run-configuration>
+        <id>{F155D005-5E3D-401F-9293-3A3A4AC587B1}</id>
+        <name>DI</name>
+        <creation-time>2012-01-11 20:34:16.080</creation-time>
+        <version>1</version>
+        <last-modification-time>2012-01-11 20:34:16.080</last-modification-time>
+        <configuration>
+          <step>
+            <step-type type="delta-import">
+              <import-subtype>to-cs</import-subtype>
+            </step-type>
+            <threshold>
+            </threshold>
+            <partition>{888C6594-BE1B-4B29-8B6D-6E218D2161F5}</partition>
+            <custom-data>
+            </custom-data>
+          </step>
+        </configuration>
+      </run-configuration>
+      <run-configuration>
+        <id>{02BE3814-E34F-4795-AB0D-0FA9F8ECC709}</id>
+        <name>FS</name>
+        <creation-time>2012-01-11 20:34:16.080</creation-time>
+        <version>1</version>
+        <last-modification-time>2012-01-11 20:34:16.080</last-modification-time>
+        <configuration>
+          <step>
+            <step-type type="apply-rules">
+              <apply-rules-subtype>reevaluate-flow-connectors</apply-rules-subtype>
+            </step-type>
+            <threshold>
+            </threshold>
+            <partition>{888C6594-BE1B-4B29-8B6D-6E218D2161F5}</partition>
+            <custom-data>
+            </custom-data>
+          </step>
+        </configuration>
+      </run-configuration>
+      <run-configuration>
+        <id>{090DB945-4AFB-4821-B737-E30524E6710D}</id>
+        <name>DS</name>
+        <creation-time>2012-01-11 20:34:16.080</creation-time>
+        <version>1</version>
+        <last-modification-time>2012-01-11 20:34:16.080</last-modification-time>
+        <configuration>
+          <step>
+            <step-type type="apply-rules">
+              <apply-rules-subtype>apply-pending</apply-rules-subtype>
+            </step-type>
+            <threshold>
+            </threshold>
+            <partition>{888C6594-BE1B-4B29-8B6D-6E218D2161F5}</partition>
+            <custom-data>
+            </custom-data>
+          </step>
+        </configuration>
+      </run-configuration>
+      <run-configuration>
+        <id>{4E927917-601B-4F37-BE95-423A68F5BE85}</id>
+        <name>FIFS</name>
+        <creation-time>2012-01-11 20:34:16.080</creation-time>
+        <version>1</version>
+        <last-modification-time>2012-01-11 20:34:16.080</last-modification-time>
+        <configuration>
+          <step>
+            <step-type type="full-import-reevaluate-rules">
+            </step-type>
+            <threshold>
+            </threshold>
+            <partition>{888C6594-BE1B-4B29-8B6D-6E218D2161F5}</partition>
+            <custom-data>
+            </custom-data>
+          </step>
+        </configuration>
+      </run-configuration>
+      <run-configuration>
+        <id>{A0FF2D4D-AFC4-4AB9-AB54-606F21B2099E}</id>
+        <name>FIDS</name>
+        <creation-time>2012-01-11 20:34:16.080</creation-time>
+        <version>1</version>
+        <last-modification-time>2012-01-11 20:34:16.080</last-modification-time>
+        <configuration>
+          <step>
+            <step-type type="full-import">
+            </step-type>
+            <threshold>
+            </threshold>
+            <partition>{888C6594-BE1B-4B29-8B6D-6E218D2161F5}</partition>
+            <custom-data>
+            </custom-data>
+          </step>
+        </configuration>
+      </run-configuration>
+      <run-configuration>
+        <id>{F5340017-CC39-4956-922F-E7AF870594EC}</id>
+        <name>DIDS</name>
+        <creation-time>2012-01-11 20:34:16.080</creation-time>
+        <version>1</version>
+        <last-modification-time>2012-01-11 20:34:16.080</last-modification-time>
+        <configuration>
+          <step>
+            <step-type type="delta-import">
+            </step-type>
+            <threshold>
+            </threshold>
+            <partition>{888C6594-BE1B-4B29-8B6D-6E218D2161F5}</partition>
+            <custom-data>
+            </custom-data>
+          </step>
+        </configuration>
+      </run-configuration>
+      <run-configuration>
+        <id>{5B6382F7-1ED9-4B78-8BC6-4E5874E07F7F}</id>
+        <name>E.FI</name>
+        <creation-time>2012-01-11 20:34:16.080</creation-time>
+        <version>1</version>
+        <last-modification-time>2012-01-11 20:34:16.080</last-modification-time>
+        <configuration>
+          <step>
+            <step-type type="export">
+            </step-type>
+            <threshold>
+            </threshold>
+            <partition>{888C6594-BE1B-4B29-8B6D-6E218D2161F5}</partition>
+            <custom-data>
+              <fimma-step-data>
+                <time-limit>90</time-limit>
+              </fimma-step-data>
+            </custom-data>
+          </step>
+          <step>
+            <step-type type="full-import">
+              <import-subtype>to-cs</import-subtype>
+            </step-type>
+            <threshold>
+            </threshold>
+            <partition>{888C6594-BE1B-4B29-8B6D-6E218D2161F5}</partition>
+            <custom-data>
+            </custom-data>
+          </step>
+        </configuration>
+      </run-configuration>
+      <run-configuration>
+        <id>{9D792865-4332-4A74-931D-EDFF0FE477C5}</id>
+        <name>E.DI</name>
+        <creation-time>2012-01-11 20:34:16.080</creation-time>
+        <version>1</version>
+        <last-modification-time>2012-01-11 20:34:16.080</last-modification-time>
+        <configuration>
+          <step>
+            <step-type type="export">
+            </step-type>
+            <threshold>
+            </threshold>
+            <partition>{888C6594-BE1B-4B29-8B6D-6E218D2161F5}</partition>
+            <custom-data>
+              <fimma-step-data>
+                <time-limit>90</time-limit>
+              </fimma-step-data>
+            </custom-data>
+          </step>
+          <step>
+            <step-type type="delta-import">
+              <import-subtype>to-cs</import-subtype>
+            </step-type>
+            <threshold>
+            </threshold>
+            <partition>{888C6594-BE1B-4B29-8B6D-6E218D2161F5}</partition>
+            <custom-data>
+            </custom-data>
+          </step>
+        </configuration>
+      </run-configuration>
+    </ma-run-data>
+    <capabilities-mask>40b805</capabilities-mask>
+    <export-type>1</export-type>
+    <dn-construction>
+      <attribute>ObjectID</attribute>
+    </dn-construction>
+    <password-sync>
+      <maximum-retry-count>10</maximum-retry-count>
+      <retry-interval>60</retry-interval>
+      <allow-low-security>0</allow-low-security>
+    </password-sync>
+    <component_mappings />
+  </ma-data>
+  <mv-data>
+    <import-attribute-flow>
+      <import-flow-set mv-object-type="expectedRuleEntry">
+        <import-flows mv-attribute="createdTime" type="ranked">
+          <import-flow cd-object-type="ExpectedRuleEntry" id="{3919F741-AF04-4CA7-8EF8-8980DB43F0E4}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>CreatedTime</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="expectedRuleEntryAction" type="ranked">
+          <import-flow cd-object-type="ExpectedRuleEntry" id="{D927B0B4-C8EE-4096-8578-4D6BFCC39C66}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>ExpectedRuleEntryAction</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="synchronizationRuleData" type="ranked">
+          <import-flow cd-object-type="ExpectedRuleEntry" id="{355EEC69-7822-4387-891E-A9B79342CCAB}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>SynchronizationRuleData</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="synchronizationRuleID" type="ranked">
+          <import-flow cd-object-type="ExpectedRuleEntry" id="{D5D81CE8-8DBB-4434-B343-4F31D4376AC7}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>SynchronizationRuleID</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="displayName" type="ranked">
+          <import-flow cd-object-type="ExpectedRuleEntry" id="{30E0C9C4-A53F-4B69-9ACF-08EE17CAF5E7}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>DisplayName</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+      </import-flow-set>
+      <import-flow-set mv-object-type="synchronizationRule">
+        <import-flows mv-attribute="connectedObjectType" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{78E94EA1-B426-49D9-9205-C53B74664099}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>ConnectedObjectType</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="connectedSystem" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{19951B9B-C948-4AEA-ACF8-560C7D66F88F}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>ConnectedSystem</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="connectedSystemScope" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{3CB35935-CD0A-417E-AB16-84D67B9A1625}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>ConnectedSystemScope</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="createConnectedSystemObject" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{FFF0416B-5D43-4CBA-8231-B3F5F5877D79}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>CreateConnectedSystemObject</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="createILMObject" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{AADAB120-9D3D-4405-A633-AAFA5BBE1398}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>CreateILMObject</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="dependency" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{01AAC4EA-21CA-4762-A5B2-F33896964550}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>Dependency</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="disconnectConnectedSystemObject" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{0D4D2584-58FD-4255-9C29-B9795F5B706E}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>DisconnectConnectedSystemObject</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="displayName" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{D90ED987-53C8-4481-9FC2-36C60E3B3FB4}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>DisplayName</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="existenceTest" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{CCA43152-B094-4983-BE9E-75F9A9B0D52A}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>ExistenceTest</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="flowType" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{8F14A2B2-0C70-40CE-8C4C-B2F6DBFC8991}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>FlowType</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="ilmObjectType" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{07D2AFB1-A5F6-4549-8797-7C220FDC6413}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>ILMObjectType</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="initialFlow" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{C5316D85-5B79-4C29-9738-029AE0225175}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>InitialFlow</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="persistentFlow" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{A6FE0B5A-FA3C-455F-A534-03A79F77CCD2}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>PersistentFlow</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="precedence" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{F4F0F071-5B88-4D01-B2B5-CEA37C8C191B}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>Precedence</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="relationshipCriteria" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{D50FA194-BF77-404D-9A70-629D2E994298}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>RelationshipCriteria</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="synchronizationRuleParameters" type="ranked">
+          <import-flow cd-object-type="SynchronizationRule" id="{3F154A12-2AB4-453D-9190-B7CA263C9346}" src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+            <direct-mapping>
+              <src-attribute>SynchronizationRuleParameters</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+      </import-flow-set>
+      <import-flow-set mv-object-type="detectedRuleEntry">
+        <import-flows mv-attribute="csObjectID" type="ranked">
+          <import-flow src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}" cd-object-type="DetectedRuleEntry" id="{1C586992-75FC-4D4A-B019-63DE615B7216}">
+            <direct-mapping>
+              <src-attribute intrinsic="true">dn</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+      </import-flow-set>
+      <import-flow-set mv-object-type="group">
+        <import-flows mv-attribute="csObjectID" type="ranked">
+          <import-flow src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}" cd-object-type="Group" id="{03642533-00B9-4D34-9F54-9D2C2DC13315}">
+            <direct-mapping>
+              <src-attribute intrinsic="true">dn</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="expectedRulesList" type="ranked">
+          <import-flow src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}" cd-object-type="Group" id="{11101263-319D-491D-9DDE-7CD1DE2612E5}">
+            <direct-mapping>
+              <src-attribute>ExpectedRulesList</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+      </import-flow-set>
+      <import-flow-set mv-object-type="person">
+        <import-flows mv-attribute="csObjectID" type="ranked">
+          <import-flow src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}" cd-object-type="Person" id="{53F5929B-A9B0-4477-A6F5-37A9CC85A650}">
+            <direct-mapping>
+              <src-attribute intrinsic="true">dn</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+        <import-flows mv-attribute="expectedRulesList" type="ranked">
+          <import-flow src-ma="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}" cd-object-type="Person" id="{840575A6-417E-47DC-B921-774CC90350D8}">
+            <direct-mapping>
+              <src-attribute>ExpectedRulesList</src-attribute>
+            </direct-mapping>
+          </import-flow>
+        </import-flows>
+      </import-flow-set>
+      <per-ma-options>
+        <ma-options ma-id="{E6476169-0872-4667-A8B9-215CC4DB281F}">
+          <enable-recall>true</enable-recall>
+        </ma-options>
+        <ma-options ma-id="{61B44968-03EE-4BAA-B75C-72A0A4F9D8A0}">
+          <enable-recall>true</enable-recall>
+        </ma-options>
+      </per-ma-options>
+    </import-attribute-flow>
+  </mv-data>
+</export-ma>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FIAB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <General>
+    <QualifiedPortalVirtualName>r2portal.develop.local</QualifiedPortalVirtualName>
+    <UnqualifiedPortalVirtualName>r2portal</UnqualifiedPortalVirtualName>
+    <QualifiedServiceVirtualName>r2svc.develop.local</QualifiedServiceVirtualName>
+    <UnqualifiedServiceVirtualName>r2svc</UnqualifiedServiceVirtualName>
+
+    <!-- begin new  -->
+    <PasswordResetFQDN>r2pwdreset.develop.local</PasswordResetFQDN>
+    <PasswordResetNetBIOSName>r2pwdreset</PasswordResetNetBIOSName>
+    <PasswordRegistrationFQDN>r2pwdregistration.develop.local</PasswordRegistrationFQDN>
+    <!-- end new  -->
+
+    <ManagedOU>OU=R2 Managed Users and Groups</ManagedOU>
+    <ServiceAccountsOU>OU=R2 FIM Service Accounts</ServiceAccountsOU>
+    <SoftwareRootPath>C:\SW</SoftwareRootPath>
+    <ServiceAccounts>
+      <SQLServer>R2-SQLSERVICE</SQLServer>
+      <SQLServerPassword>Passw0rd</SQLServerPassword>
+      <SQLServerAgent>R2-SQLSERVICE</SQLServerAgent>
+      <SQLServerAgentPassword>Passw0rd</SQLServerAgentPassword>
+      <SharePointConfigService>R2-FIMSPConfig</SharePointConfigService>
+      <SharePointConfigServicePassword>Passw0rd</SharePointConfigServicePassword>
+      <SharePointApplicationPoolService>R2-FIMSPContent</SharePointApplicationPoolService>
+      <SharePointApplicationPoolServicePassword>Passw0rd</SharePointApplicationPoolServicePassword>
+      <FIMSynchronizationService>SVCFIMSync</FIMSynchronizationService>
+      <FIMSynchronizationServicePassword>Passw0rd</FIMSynchronizationServicePassword>
+      <FIMService>R2-FIMSERVICE</FIMService>
+      <FIMServicePassword>Passw0rd</FIMServicePassword>
+      <FIMServiceEMail>r2-fimservice@develop.local</FIMServiceEMail>
+
+      <!-- begin new  -->
+      <FIMPasswordResetService>R2-FIMPWDRESET</FIMPasswordResetService>
+      <FIMPasswordResetServicePassword>Passw0rd</FIMPasswordResetServicePassword>
+      <!-- end new  -->
+
+      <ManagementAgentAD>R2-FIMADMA</ManagementAgentAD>
+      <ManagementAgentADPassword>Passw0rd</ManagementAgentADPassword>
+      <ManagementAgentFIM>R2-FIMMA</ManagementAgentFIM>
+      <ManagementAgentFIMPassword>Passw0rd</ManagementAgentFIMPassword>
+    </ServiceAccounts>
+  </General>
+  <FIMServiceConfiguration>
+    <SynchronizationRules>
+      <UsersToPortalName>FIAB: All Users synchronize basic information with portal</UsersToPortalName>
+      <UsersToADName>FIAB: All Users synchronize with Active Directory</UsersToADName>
+      <GroupsToADName>FIAB: All Groups synchronize with Active Directory</GroupsToADName>
+    </SynchronizationRules>
+    <Workflows>
+      <AddUserToAD>FIAB: All Users synchronize with Active Directory</AddUserToAD>
+      <AddGroupToAD>FIAB: All Groups synchronize with Active Directory</AddGroupToAD>
+    </Workflows>
+    <Sets>
+      <AllPeople>_FIAB: All People</AllPeople>
+      <AllGroups>_FIAB: All Groups</AllGroups>
+    </Sets>
+    <ManagementPolicyRules>
+      <AddUserToADSyncRule>_FIAB: Add AD Synchronization Rule to All Users</AddUserToADSyncRule>
+      <AddGroupToADSyncRule>_FIAB: Add AD Synchronization Rule to All Groups</AddGroupToADSyncRule>
+    </ManagementPolicyRules>
+  </FIMServiceConfiguration>
+  <SQLServer>
+    <UseLocalSQLServer>0</UseLocalSQLServer>
+    <SQLServer>SQL01</SQLServer>
+    <SQLServerInstance></SQLServerInstance>
+  </SQLServer>
+
+  <SharePoint2010>
+    <DatabaseConfiguration>FIABSPConfig</DatabaseConfiguration>
+    <DatabaseAdminContent>FIABSPContentAdmin</DatabaseAdminContent>
+    <DatabaseContent>FIABSPContent</DatabaseContent>
+    <WebApplication>FIAB</WebApplication>
+    <WebApplicationAppPool>FIABAppPool</WebApplicationAppPool>
+    <WebApplicationPort>80</WebApplicationPort>
+    <CentralAdminWebApplicationPortNumber>8080</CentralAdminWebApplicationPortNumber>
+    <Authentication>Kerberos</Authentication>
+    <FarmPassphrase>FIM in-a-Box</FarmPassphrase>
+    <SiteCollectionName>FIM in-a-Box R2</SiteCollectionName>
+    <SiteCollectionTemplate>STS#0</SiteCollectionTemplate>
+    <SiteCollectionLanguage>1033</SiteCollectionLanguage>
+    <SiteCollectionSecondaryOwner>DEVELOP\SecondAdmin</SiteCollectionSecondaryOwner>
+  </SharePoint2010>
+
+  <SynchronizationService>
+    <GroupAdmins>R2FIMSYNCADMINS</GroupAdmins>
+    <GroupOperators>R2FIMSYNCOPERATORS</GroupOperators>
+    <GroupAccountJoiners>R2FIMSYNCJOINERS</GroupAccountJoiners>
+    <GroupBrowse>R2FIMSYNCBROWSE</GroupBrowse>
+    <GroupPasswordSet>R2FIMSYNCPASSWORDSET</GroupPasswordSet>
+  </SynchronizationService>
+
+  <FIMServiceAndFIMPortal>
+    <MailServer>mailserver.develop.local</MailServer>
+    <MailServerIsExchange>0</MailServerIsExchange>
+    <MailServerUseSSL>0</MailServerUseSSL>
+    <PollExchangeEnabled>0</PollExchangeEnabled>
+    <SynchronizationServer>FIM01</SynchronizationServer>
+    <FirewallConfiguration>1</FirewallConfiguration>
+    <SharePointUsersConfiguration>1</SharePointUsersConfiguration>
+    <PasswordPortalConfiguration>1</PasswordPortalConfiguration>
+    <SharePointTimeout>180</SharePointTimeout>
+  </FIMServiceAndFIMPortal>
+</FIAB>

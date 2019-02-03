@@ -1,0 +1,78 @@
+#
+# SharePoint 2010 Unleashed - PowerShell farm config script
+# http://www.amazon.com/Microsoft-SharePoint-2010-Unleashed-Michael/dp/0672333252
+# Copyright: Conan Flint, Toni Frankola, Michael Noel, Muhanad Omar
+# Version: 1.0.1, Apr 2011.
+# 
+# Source: http://tinyurl.com/SPFarm-Config
+# Licensed under the MIT License:
+# http://www.opensource.org/licenses/mit-license.php
+#
+
+$configType = read-host "Do you wish to create a new farm? (Y/N)"
+if ($ConfigType -eq "N") { 
+    $DatabaseServer = read-host "Preparing to join existing farm. Please specify the name of your SQL Server";
+    $ConfigDB = read-host "Next, specify the name of your Farm Configuration Database";
+    $Passphrase = read-host "Finally, please enter your Farm passphrase" -assecurestring 
+} else { 
+    $DatabaseServer = read-host "Preparing to create a new Farm. Please specify the name of your SQL Server (ex SERVER or SERVER\INSTANCE[,PORT])";
+    $FarmName = read-host "Please specify a name for your Farm (ex. SP2010Dev)";
+    $ConfigDB = $FarmName+"_ConfigDB";
+    $AdminContentDB = $FarmName+"_CentralAdminContent";
+    Write-Host "Please enter the credentials for your Farm Account (ex. COMPANYABC\SP_Farm)";
+    $FarmAcct = Get-Credential;
+    $Passphrase = read-host "Enter a secure Farm passphrase (must meet password complexity requirements)" -assecurestring;
+    $Port = read-host "Enter a port number for the Central Administration Web App";
+    $Authentication = read-host "Finally, specify your authentication provider (NTLM/Kerberos)"; 
+}
+if ($ConfigType -eq "N") {
+    
+    if((Get-PSSnapin | Where {$_.Name -eq "Microsoft.SharePoint.PowerShell"}) -eq $null) {
+		Add-PSSnapin Microsoft.SharePoint.PowerShell;
+    }
+
+    Connect-SPConfigurationDatabase -DatabaseName $ConfigDB -DatabaseServer $DatabaseServer -Passphrase $Passphrase
+} else {
+    if((Get-PSSnapin | Where {$_.Name -eq "Microsoft.SharePoint.PowerShell"}) -eq $null) {
+		Add-PSSnapin Microsoft.SharePoint.PowerShell;
+    }
+    Write-Host "Your SharePoint Farm is being configured..."
+    New-SPConfigurationDatabase -DatabaseName $ConfigDB -DatabaseServer $DatabaseServer -AdministrationContentDatabaseName $AdminContentDB -Passphrase $Passphrase -FarmCredentials $FarmAcct
+}
+Initialize-SPResourceSecurity
+Install-SPService
+Install-SPFeature -AllExistingFeatures
+New-SPCentralAdministration -Port $Port -WindowsAuthProvider $Authentication
+Install-SPHelpCollection -All
+Install-SPApplicationContent
+Write-Host "Your SharePoint 2010 Farm has been created!"
+if ($ConfigType -eq "Y") {
+    $WebAppCreation = read-host "Would you like to provision a Web Application using the default Team Site Template? (Y/N)";
+    if ($WebAppCreation -eq "Y") {
+        $HostHeaderQ = read-host "Would you like to specify a host header? (Y/N)";
+        if ($HostHeaderQ -eq "Y") {
+            $HostHeader = read-host "Please specify a host header for your Web Application (ex. intranet.contoso.com)";
+            $URL = "http://"+$HostHeader;
+            Write-Host "Creating your Web Application...";
+            New-SPWebApplication -Name "SharePoint 2010 Team Site" -Port 80 -HostHeader $FQDN -Url $URL -ApplicationPool "Content_AppPool" -ApplicationPoolAccount (Get-SPManagedAccount $FarmAcct.UserName) -DatabaseServer $DatabaseServer -DatabaseName $FarmName + "_TeamSite_ContentDB_01";
+            New-SPSite $URL -OwnerAlias $FarmAcct.UserName -Language 1033 -Template "STS#0" -Name "Team Site";
+            Write-Host "Configuration completed.";
+        }
+        else {
+        Write-Host "Creating a Web Application using the default Team Site Template..."
+        }
+    }
+    else {
+        Write-Host "Configuration completed.";
+    }   
+}
+
+$serviceAppsConfig = read-host "Do you wish to configure Service Applications? (Y/N)"
+
+if($serviceAppsConfig -eq "Y") {
+	PowerShell -File "Configure-ServiceApps.ps1"
+}
+else {
+	Write-Host "Press any key to continue..."
+	$x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+}

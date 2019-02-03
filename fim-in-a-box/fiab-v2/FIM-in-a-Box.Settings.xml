@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FIAB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <General>
+    <QualifiedPortalVirtualName>fimportal.fabrikam.com</QualifiedPortalVirtualName>
+    <UnqualifiedPortalVirtualName>fimportal</UnqualifiedPortalVirtualName>
+    <QualifiedServiceVirtualName>fimsvc.r2test.intern</QualifiedServiceVirtualName>
+    <UnqualifiedServiceVirtualName>fimsvc</UnqualifiedServiceVirtualName>
+    <ManagedOU>OU=Managed Users and Groups</ManagedOU>
+    <ServiceAccountsOU>OU=FIM Service Accounts</ServiceAccountsOU>
+    <SoftwareRootPath>C:\MSFIAB\SW</SoftwareRootPath>
+    <ServiceAccounts>
+      <SQLServer>SVC-SQLSERVICE</SQLServer>
+      <SQLServerPassword>Passw0rd</SQLServerPassword>
+      <SQLServerAgent>SVC-SQLSERVICE</SQLServerAgent>
+      <SQLServerAgentPassword>Passw0rd</SQLServerAgentPassword>
+      <SharePointConfigService>SVC-FIMSPConfig</SharePointConfigService>
+      <SharePointConfigServicePassword>Passw0rd</SharePointConfigServicePassword>
+      <SharePointApplicationPoolService>SVC-FIMSPContent</SharePointApplicationPoolService>
+      <SharePointApplicationPoolServicePassword>Passw0rd</SharePointApplicationPoolServicePassword>
+      <FIMSynchronizationService>SVC-FIMSync</FIMSynchronizationService>
+      <FIMSynchronizationServicePassword>Passw0rd</FIMSynchronizationServicePassword>
+      <FIMService>SVC-FIMSERVICE</FIMService>
+      <FIMServicePassword>Passw0rd</FIMServicePassword>
+      <FIMServiceEMail>svc-fimservice@fabrikam.com</FIMServiceEMail>
+      <ManagementAgentAD>SVC-FIMADMA</ManagementAgentAD>
+      <ManagementAgentADPassword>Passw0rd</ManagementAgentADPassword>
+      <ManagementAgentFIM>SVC-FIMMA</ManagementAgentFIM>
+      <ManagementAgentFIMPassword>Passw0rd</ManagementAgentFIMPassword>
+    </ServiceAccounts>
+  </General>
+  <SynchronizationRules>
+    <UsersToPortalName>FIAB: All Users synchronize basic information with portal</UsersToPortalName>
+    <UsersToADName>FIAB: All Users synchronize with Active Directory</UsersToADName>
+    <GroupsToADName>FIAB: All Groups synchronize with Active Directory</GroupsToADName>
+  </SynchronizationRules>
+  <Workflows>
+    <AddUserToAD>FIAB: All Users synchronize with Active Directory</AddUserToAD>
+    <AddGroupToAD>FIAB: All Groups synchronize with Active Directory</AddGroupToAD>
+  </Workflows>
+  <Sets>
+    <AllPeople>_FIAB: All People</AllPeople>
+    <AllGroups>_FIAB: All Groups</AllGroups>
+  </Sets>
+  <ManagementPolicyRules>
+    <AddUserToADSyncRule>_FIAB: Add AD Synchronization Rule to All Users</AddUserToADSyncRule>
+    <AddGroupToADSyncRule>_FIAB: Add AD Synchronization Rule to All Groups</AddGroupToADSyncRule>
+  </ManagementPolicyRules>
+  <SQLServer>
+    <UseLocalSQLServer>0</UseLocalSQLServer>
+    <SQLServer />
+    <SQLServerInstance />
+  </SQLServer>
+  <SharePoint>
+    <DatabaseNameConfiguration>FIMSharePointConfig</DatabaseNameConfiguration>
+    <DatabaseNameAdminContent>FIMSharePointAdminContent</DatabaseNameAdminContent>
+    <DatabaseNameContent>FIMSharePointContent</DatabaseNameContent>
+    <CentralAdministrationWebsitePortNumber>8080</CentralAdministrationWebsitePortNumber>
+    <SiteOwnerAccountName>ADMINISTRATOR</SiteOwnerAccountName>
+    <SiteOwnerEMail>administrator@fabrikam.com</SiteOwnerEMail>
+  </SharePoint>
+  <SynchronizationService>
+    <GroupAdmins>FIMSYNCADMINS</GroupAdmins>
+    <GroupOperators>FIMSYNCOPERATORS</GroupOperators>
+    <GroupAccountJoiners>FIMSYNCJOINERS</GroupAccountJoiners>
+    <GroupBrowse>FIMSYNCBROWSE</GroupBrowse>
+    <GroupPasswordSet>FIMSYNCPASSWORDSET</GroupPasswordSet>
+  </SynchronizationService>
+  <FIMServiceAndFIMPortal>
+    <MailServer>mailserver.fabrikam.com</MailServer>
+    <MailServerIsExchange>1</MailServerIsExchange>
+    <MailServerUseSSL>1</MailServerUseSSL>
+    <PollExchangeEnabled>1</PollExchangeEnabled>
+    <SynchronizationServer>FIMSYNC01</SynchronizationServer>
+    <FirewallConfiguration>1</FirewallConfiguration>
+    <SharePointUsersConfiguration>1</SharePointUsersConfiguration>
+    <PasswordPortalConfiguration>1</PasswordPortalConfiguration>
+    <SharePointTimeout>180</SharePointTimeout>
+  </FIMServiceAndFIMPortal>
+</FIAB>

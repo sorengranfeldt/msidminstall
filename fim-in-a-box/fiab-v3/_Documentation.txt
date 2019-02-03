@@ -1,0 +1,4 @@
+1) You may have to disable Internet Enhanced Security Configuration (IE ESC) to be able to access SharePoint Central Administration
+2) Add the FQDN's of the portal to Trusted Sites in Internet Explorer (IE)
+3) PARAMETER Password Reset Registration site is always set up as Extranet
+3) PARAMETER Password Reset site is always set up af Extranet

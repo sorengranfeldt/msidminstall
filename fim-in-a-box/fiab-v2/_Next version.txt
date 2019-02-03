@@ -1,0 +1,7 @@
+Configurator
+------------
+Fix tabs/field movement
+
+Errors
+-----
+Problems with space in installation root path
